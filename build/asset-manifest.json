@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4b363270.css",
+    "main.js": "/static/js/main.b7774a44.js",
+    "static/js/787.1937f22b.chunk.js": "/static/js/787.1937f22b.chunk.js",
+    "static/media/profile.jpeg": "/static/media/profile.eba91a5ab2a583e94dfb.jpeg",
+    "static/media/TusharSahu_121CS0230.pdf": "/static/media/TusharSahu_121CS0230.c159d518ff0823cf35b7.pdf",
+    "index.html": "/index.html",
+    "main.4b363270.css.map": "/static/css/main.4b363270.css.map",
+    "main.b7774a44.js.map": "/static/js/main.b7774a44.js.map",
+    "787.1937f22b.chunk.js.map": "/static/js/787.1937f22b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4b363270.css",
+    "static/js/main.b7774a44.js"
+  ]
+}
