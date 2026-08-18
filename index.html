@@ -286,6 +286,12 @@
   .honors-list b{ color:var(--ink); font-weight:600; }
   .honors-list .ico{ color:var(--accent); flex-shrink:0; margin-top:2px; }
 
+  /* projects */
+  .proj-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+  @media (max-width:900px){ .proj-grid{ grid-template-columns:1fr 1fr; } }
+  @media (max-width:640px){ .proj-grid{ grid-template-columns:1fr; } }
+  .proj-grid .pub-card{ height:100%; }
+
   /* publications */
   .pub-card{ background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:28px; box-shadow:var(--shadow); display:flex; flex-direction:column; gap:14px; transition:transform .3s ease, box-shadow .3s ease; }
   .pub-card:hover{ transform:translateY(-5px); box-shadow:0 22px 44px -20px rgba(18,20,27,0.2); }
@@ -340,6 +346,7 @@
       <ul>
         <li><a href="#about" data-nav="about">About</a></li>
         <li><a href="#experience" data-nav="experience">Experience</a></li>
+        <li><a href="#projects" data-nav="projects">Projects</a></li>
         <li><a href="#leadership" data-nav="leadership">Leadership</a></li>
         <li><a href="#academics" data-nav="academics">Academics</a></li>
         <li><a href="#publications" data-nav="publications">Publications</a></li>
@@ -358,6 +365,7 @@
     <ul>
       <li><a href="#about">About</a></li>
       <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
       <li><a href="#leadership">Leadership</a></li>
       <li><a href="#academics">Academics</a></li>
       <li><a href="#publications">Publications</a></li>
@@ -465,6 +473,62 @@
         <h3>Software Engineer Intern</h3>
         <div class="torg">NatWest Group · Gurugram, Haryana</div>
         <p>Three-month engineering internship that preceded and led directly into the full-time Software Developer offer.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><hr class="rule"></div>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="tag">Projects</div>
+      <h2>Things I've shipped.</h2>
+      <p>Independent builds — front-end heavy, backed by live APIs or a small server, each one designed and coded end to end.</p>
+    </div>
+    <div class="proj-grid">
+      <div class="pub-card reveal tilt">
+        <div class="prow">
+          <h3>CodeQuest</h3>
+          <span class="ptag">Web App</span>
+        </div>
+        <div class="pvenue">Live coding contest tracker</div>
+        <p>Pulls real-time contest schedules straight from the Codeforces, LeetCode and CodeChef APIs — search, platform filters, sorting, and live countdown timers, with a dark/light theme and a fully responsive layout down to small phones.</p>
+        <div class="chips">
+          <div class="chip">HTML</div><div class="chip">CSS</div><div class="chip">JavaScript</div><div class="chip">REST APIs</div>
+        </div>
+        <div class="plinks">
+          <a href="https://github.com/Anicrate/Coding-Quest" target="_blank" rel="noopener">View on GitHub ↗</a>
+        </div>
+      </div>
+      <div class="pub-card reveal tilt">
+        <div class="prow">
+          <h3>Resolv</h3>
+          <span class="ptag">Full-Stack</span>
+        </div>
+        <div class="pvenue">Campus complaint portal</div>
+        <p>A redesign of a campus complaint system end to end — complaint filing and tracking, a live community feed, and a Staff Console that gives complaints an actual resolution workflow instead of a placeholder timer.</p>
+        <div class="chips">
+          <div class="chip">HTML</div><div class="chip">CSS</div><div class="chip">JavaScript</div><div class="chip">REST APIs</div>
+        </div>
+        <div class="plinks">
+          <a href="https://github.com/Anicrate/Hack-nitr" target="_blank" rel="noopener">View on GitHub ↗</a>
+        </div>
+      </div>
+      <div class="pub-card reveal tilt">
+        <div class="prow">
+          <h3>CropFinder</h3>
+          <span class="ptag">Web App</span>
+        </div>
+        <div class="pvenue">Crop recommendation tool</div>
+        <p>Helps users find suitable crops based on soil and regional inputs — a static front end backed by a lightweight Node/Express server for data lookups.</p>
+        <div class="chips">
+          <div class="chip">Node.js</div><div class="chip">Express</div><div class="chip">JavaScript</div>
+        </div>
+        <div class="plinks">
+          <a href="https://github.com/Anicrate/Crop-Finder" target="_blank" rel="noopener">View on GitHub ↗</a>
+        </div>
       </div>
     </div>
   </div>
@@ -636,7 +700,7 @@
 
   // active nav link while scrolling (scroll-spy)
   const navLinks = document.querySelectorAll('#navmenu a[data-nav]');
-  const spySections = ['about','experience','leadership','academics','publications']
+  const spySections = ['about','experience','projects','leadership','academics','publications']
     .map(id=>document.getElementById(id)).filter(Boolean);
   const spyObserver = new IntersectionObserver((entries)=>{
     entries.forEach(entry=>{
