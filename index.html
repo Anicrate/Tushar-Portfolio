@@ -9,6 +9,7 @@
 <meta property="og:title" content="Tushar Sahu — Engineer by degree. Strategist by choice.">
 <meta property="og:description" content="Tushar Sahu — Software Engineer at NatWest Group, NIT Rourkela CSE, CAT 2026 aspirant. Building mascot-led visual CAT notes.">
 <meta property="og:type" content="website">
+<script>document.documentElement.classList.add("js")</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Kalam:wght@400;700&amp;display=swap">
 <style>
@@ -28,45 +29,7 @@ a{color:#1D5BA6}a:hover{color:#0F3A6B}
 @keyframes drawOnce{to{stroke-dashoffset:0}}
 
 /* ===== Cinematic scroll-driven motion (Chrome/Edge; static elsewhere) ===== */
-@supports (animation-timeline: view()){
-.progress{transform-origin:left;animation:grow linear both;animation-timeline:scroll(root)}
-@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
-.cine-exit{animation:camPush linear both;animation-timeline:view();animation-range:exit 0% exit 90%}
-@keyframes camPush{to{transform:scale(1.35);opacity:0;filter:blur(12px)}}
-.parallax{animation:par linear both;animation-timeline:view();animation-range:exit 0% exit 100%}
-@keyframes par{to{transform:translateY(-160px) scale(1.12)}}
 
-.scene{view-timeline-name:--scene}
-.sc-grid{animation:gridZoom linear both;animation-timeline:--scene;animation-range:contain 0% contain 100%}
-@keyframes gridZoom{0%{transform:scale(1.25);opacity:.3;filter:blur(6px)}25%{transform:scale(1);opacity:1;filter:none}100%{transform:scale(1.5);opacity:.7}}
-.sc-title{animation:titleZoom linear both;animation-timeline:--scene;animation-range:contain 0% contain 100%}
-@keyframes titleZoom{0%{transform:scale(.45);opacity:0;letter-spacing:.4em;filter:blur(10px)}24%{transform:scale(1);opacity:1;letter-spacing:-.02em;filter:none}62%{transform:scale(1.7);opacity:1;filter:none}80%{transform:scale(9);opacity:0;filter:blur(6px)}100%{transform:scale(26);opacity:0}}
-.sc-kicker{animation:kicker linear both;animation-timeline:--scene;animation-range:contain 0% contain 55%}
-@keyframes kicker{0%{opacity:0;transform:translateY(40px)}40%,70%{opacity:1;transform:none}100%{opacity:0;transform:translateY(-30px)}}
-.sc-dim line,.sc-dim path,.sc-dim circle{stroke-dasharray:900;animation:dimDraw linear both;animation-timeline:--scene;animation-range:contain 5% contain 45%}
-@keyframes dimDraw{from{stroke-dashoffset:900}to{stroke-dashoffset:0}}
-.sc-mascot{animation:mascotDive linear both;animation-timeline:--scene;animation-range:contain 8% contain 78%}
-@keyframes mascotDive{0%{opacity:0;transform:translateY(140px) scale(.55)}35%{opacity:1;transform:none}100%{opacity:0;transform:translateY(-80px) scale(3.2)}}
-.sc-paper{animation:paperFly linear both;animation-timeline:--scene;animation-range:contain 0% contain 40%}
-@keyframes paperFly{0%{transform:translate(0,0) rotate(0) scale(1);opacity:1}100%{transform:translate(-700px,-500px) rotate(-35deg) scale(.6);opacity:0}}
-.sc-paper2{animation:paperFly2 linear both;animation-timeline:--scene;animation-range:contain 0% contain 40%}
-@keyframes paperFly2{0%{transform:none;opacity:1}100%{transform:translate(700px,-460px) rotate(30deg) scale(.6);opacity:0}}
-.bar-top,.bar-bottom{animation:bars linear both;animation-timeline:--scene;animation-range:contain 0% contain 100%}
-.bar-top{transform-origin:top}.bar-bottom{transform-origin:bottom}
-@keyframes bars{0%{transform:scaleY(0)}16%,84%{transform:scaleY(1)}100%{transform:scaleY(0)}}
-
-.line-grow{transform-origin:left;animation:grow linear both;animation-timeline:view();animation-range:entry 30% cover 55%}
-.zoom-in{animation:zoomIn linear both;animation-timeline:view();animation-range:entry 0% cover 35%}
-@keyframes zoomIn{from{opacity:0;transform:scale(.8);filter:blur(10px)}to{opacity:1;transform:none;filter:none}}
-.pin-in{animation:pinIn linear both;animation-timeline:view();animation-range:entry 10% cover 40%}
-@keyframes pinIn{from{opacity:0;transform:translateY(-120px) rotate(-18deg) scale(1.3)}to{opacity:1;transform:rotate(-2deg)}}
-.drop-in{animation:dropIn linear both;animation-timeline:view();animation-range:entry 0% cover 35%}
-@keyframes dropIn{from{opacity:0;transform:translateY(-90px) rotate(-14deg) scale(1.15)}to{opacity:1;transform:rotate(var(--r,0deg))}}
-.tilt-in{animation:tiltIn linear both;animation-timeline:view();animation-range:entry 0% cover 45%}
-@keyframes tiltIn{from{opacity:0;transform:perspective(1200px) rotateX(35deg) scale(.82) translateY(80px)}to{opacity:1;transform:perspective(1200px) rotateX(0) scale(1)}}
-.big-in{animation:bigIn linear both;animation-timeline:view();animation-range:entry 0% cover 50%}
-@keyframes bigIn{from{opacity:0;transform:scale(.6);letter-spacing:.25em}to{opacity:1;transform:none;letter-spacing:-.02em}}
-}
 @media (prefers-reduced-motion: reduce){*{animation:none !important}}
 </style>
 <style>
@@ -98,8 +61,11 @@ body > div{overflow-x:clip}
   .sc-paper,.sc-paper2,.sc-dim{display:none!important}
 }
 </style>
+<link rel="stylesheet" href="assets/motion.css">
 </head>
 <body>
+<div class="curtain" aria-hidden="true"><div class="curtain-card"><div class="curtain-logo">tushar<span>.</span>sahu</div><div class="curtain-bar"><i></i></div><div class="curtain-label">Sheet 01 · Home</div></div></div>
+<div class="thread" aria-hidden="true"><div class="thread-line"></div><div class="thread-tip"></div></div>
 <div class="paper" style="width: 100%; font-family: Inter, system-ui, sans-serif; color: #16161D; box-sizing: border-box">
 
 <!-- NAV + scroll progress -->
@@ -361,5 +327,9 @@ body > div{overflow-x:clip}
 </footer>
 
 </div>
+<script src="assets/vendor/gsap.min.js" defer></script>
+<script src="assets/vendor/ScrollTrigger.min.js" defer></script>
+<script src="assets/vendor/lenis.min.js" defer></script>
+<script src="assets/motion.js" defer></script>
 </body>
 </html>

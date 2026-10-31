@@ -17,10 +17,19 @@ Plain static HTML/CSS — no build step.
 | Shop after launch | `shop-launch.html` | draft · unlinked · noindex |
 | Product page (QA Visual Notes) | `product.html` | draft · unlinked · noindex |
 
-### Scroll animations
-Cinematic, scroll-driven motion uses CSS scroll-driven animations (`animation-timeline`),
-supported in Chrome and Edge. Other browsers get the full static design.
-Visitors with "reduce motion" turned on see a static page.
+### Motion
+All motion lives in `assets/motion.js` + `assets/motion.css` and works in every modern browser:
+- **Smooth scrolling** with [Lenis](https://github.com/darkroomengineering/lenis).
+- **Scroll-scrubbed animation** with [GSAP ScrollTrigger](https://gsap.com/docs/v3/Plugins/ScrollTrigger/):
+  every animation follows the scroll with easing, so it never jerks.
+- **Sheets**: each section is a sheet of paper or blueprint; as the next one slides up, the
+  current one sinks back and darkens, so sections hand over instead of just scrolling past.
+- **Cinematic scene** on Home: a pinned blueprint sheet that zooms through "THE BUILD LOG".
+- **Page curtain**: a blueprint sheet wipes between pages, labelled with the page you're going to.
+- **Pencil thread**: an amber line down the notebook margin traces your progress through the page.
+
+Libraries are vendored in `assets/vendor/` (no third-party CDN at runtime).
+Visitors with "reduce motion" turned on get the static design with no animation.
 
 ### Run locally
 ```bash
