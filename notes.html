@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Notes · Tushar Sahu</title>
+<meta name="description" content="Tushar Sahu — Software Engineer at NatWest Group, NIT Rourkela CSE, CAT 2026 aspirant. Building mascot-led visual CAT notes.">
+<meta name="theme-color" content="#0F3A6B">
+<meta property="og:title" content="Notes · Tushar Sahu">
+<meta property="og:description" content="Tushar Sahu — Software Engineer at NatWest Group, NIT Rourkela CSE, CAT 2026 aspirant. Building mascot-led visual CAT notes.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;family=Kalam:wght@400;700&amp;display=swap">
+<style>
+body{margin:0;background:#FBF8F1}
+a{color:#1D5BA6}a:hover{color:#0F3A6B}
+.grid-paper{background-color:#FBF8F1;background-image:linear-gradient(90deg,transparent 118px,#F0A8A0 118px,#F0A8A0 120px,transparent 120px),repeating-linear-gradient(#FBF8F1 0,#FBF8F1 35px,#DCE6F2 35px,#DCE6F2 36px)}
+.bp{background-color:#0F3A6B;background-image:linear-gradient(rgba(255,255,255,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.14) 1px,transparent 1px),linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:120px 120px,120px 120px,24px 24px,24px 24px}
+@supports (animation-timeline: view()){.progress{transform-origin:left;animation:grow linear both;animation-timeline:scroll(root)}@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}.tilt-in{animation:tiltIn linear both;animation-timeline:view();animation-range:entry 0% cover 45%}@keyframes tiltIn{from{opacity:0;transform:perspective(1200px) rotateX(35deg) scale(.82) translateY(80px)}to{opacity:1;transform:none}}}
+@supports (animation-timeline: view()){.zoom-in{animation:zoomIn linear both;animation-timeline:view();animation-range:entry 0% cover 35%}@keyframes zoomIn{from{opacity:0;transform:scale(.85);filter:blur(8px)}to{opacity:1;transform:none;filter:none}}}
+@media (prefers-reduced-motion: reduce){.zoom-in{animation:none !important}}
+</style>
+<style>
+html{scroll-behavior:smooth}
+img,svg{max-width:100%}
+body > div{overflow-x:clip}
+@media (max-width: 1100px){
+  [style*="repeat(6, minmax(0, 1fr))"]{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+  [style*="repeat(4, minmax(0, 1fr))"]{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
+@media (max-width: 720px){
+  [style*="grid-template-columns: repeat("]{grid-template-columns:1fr!important}
+  h1{font-size:44px!important}
+  h2{font-size:34px!important}
+  .sc-title{font-size:46px!important;white-space:normal!important}
+  nav{padding-left:20px!important;padding-right:20px!important}
+  nav > div{gap:14px!important;font-size:14px!important}
+  section,footer{padding-left:20px!important;padding-right:20px!important}
+  .paper,.grid-paper{background-image:repeating-linear-gradient(#FBF8F1 0,#FBF8F1 35px,#DCE6F2 35px,#DCE6F2 36px)!important}
+  .parallax > div{zoom:.7}
+  [style*="padding: 56px"]{padding:28px!important}
+  [style*="padding: 40px 40px 40px 150px"]{padding:28px!important}
+  [style*="32px 0 64px"],[style*="0 32px 0 64px"],[style*="32px 96px 64px"],[style*="32px 110px 64px"]{padding-left:0!important;padding-right:0!important}
+  [style*="display: inline-grid"]{display:grid!important;grid-template-columns:repeat(2,auto)!important}
+  [style*="left: 40px; top: 0; bottom: 0"]{display:none!important}
+  [style*="right: 90px; top: 600px"]{display:none!important}
+  .scene{padding-left:0!important;padding-right:0!important;height:1800px!important}
+  .scene > div{height:640px!important}
+  .sc-paper,.sc-paper2,.sc-dim{display:none!important}
+}
+</style>
+</head>
+<body>
+<div class="grid-paper" style="width: 100%; font-family: Inter, system-ui, sans-serif; color: #16161D">
+
+<header style="position: sticky; top: 0; z-index: 5; background: rgba(250,247,240,0.94); border-bottom: 1.5px solid #0F3A6B">
+<nav style="max-width: 1200px; margin: 0 auto; padding: 18px 32px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+<a href="index.html" style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 22px; color: #16161D; text-decoration: none">tushar<span style="color: #1D5BA6">.</span>sahu</a>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 28px; font-size: 15px; font-weight: 500">
+<a href="shop.html" style="color: #16161D; text-decoration: none">Shop</a>
+<a href="free.html" style="color: #16161D; text-decoration: none">Free</a>
+<a href="mentorship.html" style="color: #16161D; text-decoration: none">Mentorship</a>
+<a href="notes.html" style="color: #16161D; text-decoration: none; border-bottom: 2px solid #E8A33D; padding-bottom: 4px">Notes</a>
+<a href="index.html" style="color: #16161D; text-decoration: none">About</a>
+<a href="free.html" style="background: #0F3A6B; color: #FFFFFF; text-decoration: none; padding: 12px 18px; border-radius: 4px; font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: .04em; box-shadow: 3px 3px 0 #E8A33D">GET THE FREE PACK</a>
+</div>
+</nav>
+<div aria-hidden="true" class="progress" style="height: 4px; background: #E8A33D; transform: scaleX(.18); transform-origin: left"></div>
+</header>
+
+<section style="max-width: 1200px; margin: 0 auto; padding: 64px 32px 28px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 12px">
+<div style="font-family: 'JetBrains Mono', monospace; font-size: 14px; color: #1D5BA6">NOTES</div>
+<h1 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 64px; letter-spacing: -0.03em; line-height: 1">Thinking out loud.</h1>
+<p style="margin: 0; font-size: 18px; color: #4A4A55; max-width: 560px; line-height: 1.6">CAT strategy, the engineer → MBA plot, and lessons from building data systems. No fluff, just notes.</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<button type="button" style="font: inherit; font-size: 14px; font-weight: 600; background: #16161D; color: #FAF7F0; border: 1.5px solid #16161D; padding: 11px 18px; border-radius: 99px">All</button>
+<button type="button" style="font: inherit; font-size: 14px; font-weight: 600; background: #FFFFFF; color: #16161D; border: 1.5px solid #16161D; padding: 11px 18px; border-radius: 99px">CAT</button>
+<button type="button" style="font: inherit; font-size: 14px; font-weight: 600; background: #FFFFFF; color: #16161D; border: 1.5px solid #16161D; padding: 11px 18px; border-radius: 99px">Journey</button>
+<button type="button" style="font: inherit; font-size: 14px; font-weight: 600; background: #FFFFFF; color: #16161D; border: 1.5px solid #16161D; padding: 11px 18px; border-radius: 99px">Tech</button>
+</div>
+</section>
+
+<section style="max-width: 1200px; margin: 0 auto; padding: 12px 32px 32px">
+<article class="tilt-in" style="background: #FFFFFF; border: 2px solid #16161D; border-radius: 6px; box-shadow: 8px 8px 0 #E8A33D; overflow: hidden; display: flex; flex-wrap: wrap">
+<div class="bp" style="flex: 1 1 420px; min-height: 300px; color: #FFFFFF; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 6px; padding: 32px; box-sizing: border-box">
+<div style="font-family: 'Space Grotesk', sans-serif; font-size: 96px; font-weight: 700; line-height: 1">8 <span style="color: #E8A33D">→</span> 1</div>
+<div style="font-family: Kalam, cursive; font-size: 22px; color: #C9C6D6">clashes reported vs. clashes real</div>
+</div>
+<div style="flex: 999 1 460px; min-width: 0; padding: 36px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; gap: 10px; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #5B5B66"><span style="background: #E8E6F6; color: #1D5BA6; padding: 3px 10px; border-radius: 99px">TECH</span><span>FEATURED · [DATE] · [N] min read</span></div>
+<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 34px; letter-spacing: -0.02em; line-height: 1.1">My dashboard found 8 contest clashes. Only 1 was real.</h2>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #4A4A55">A data-quality story from CodeQuest: one third-party feed, every platform's contests, and LeetCode durations inflated 60×.</p>
+<a href="#" style="font-weight: 700; font-size: 16px">Read the note →</a>
+</div>
+</article>
+</section>
+
+<section style="max-width: 1200px; margin: 0 auto; padding: 16px 32px 56px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px">
+<article class="zoom-in" style="background: #FFFFFF; border: 1.5px solid #16161D; border-radius: 4px; box-shadow: 5px 5px 0 #0F3A6B; padding: 26px; display: flex; flex-direction: column; gap: 12px; min-height: 230px"><span style="align-self: flex-start; background: #FCE9C8; color: #8A5A12; padding: 3px 10px; border-radius: 99px; font-family: 'JetBrains Mono', monospace; font-size: 12px">CAT</span><h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 22px; line-height: 1.2">[Draft] How I fit CAT prep around a full-time job</h3><p style="margin: 0; font-size: 14px; line-height: 1.6; color: #4A4A55">[One-line summary]</p><a href="#" style="margin-top: auto; font-weight: 600; font-size: 15px">Read →</a></article>
+<article class="zoom-in" style="background: #FFFFFF; border: 1.5px solid #16161D; border-radius: 4px; box-shadow: 5px 5px 0 #0F3A6B; padding: 26px; display: flex; flex-direction: column; gap: 12px; min-height: 230px"><span style="align-self: flex-start; background: #FCE9C8; color: #8A5A12; padding: 3px 10px; border-radius: 99px; font-family: 'JetBrains Mono', monospace; font-size: 12px">CAT</span><h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 22px; line-height: 1.2">[Draft] Picking DILR sets in the first five minutes</h3><p style="margin: 0; font-size: 14px; line-height: 1.6; color: #4A4A55">[One-line summary]</p><a href="#" style="margin-top: auto; font-weight: 600; font-size: 15px">Read →</a></article>
+<article class="zoom-in" style="background: #FFFFFF; border: 1.5px solid #16161D; border-radius: 4px; box-shadow: 5px 5px 0 #0F3A6B; padding: 26px; display: flex; flex-direction: column; gap: 12px; min-height: 230px"><span style="align-self: flex-start; background: #E3EFE6; color: #2F6B45; padding: 3px 10px; border-radius: 99px; font-family: 'JetBrains Mono', monospace; font-size: 12px">JOURNEY</span><h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 22px; line-height: 1.2">[Draft] Why an engineer wants an MBA</h3><p style="margin: 0; font-size: 14px; line-height: 1.6; color: #4A4A55">[One-line summary]</p><a href="#" style="margin-top: auto; font-weight: 600; font-size: 15px">Read →</a></article>
+</section>
+
+<section style="max-width: 1200px; margin: 0 auto; padding: 0 32px 80px">
+<div style="background: #E8A33D; border: 2px solid #16161D; border-radius: 22px; padding: 36px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 6px; max-width: 520px"><div style="font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 700">New notes, straight to your inbox</div><div style="font-size: 15px">Plus the free Percentages pack. A two-for-one, basically.</div></div>
+<form style="display: flex; flex-wrap: wrap; gap: 10px; flex: 1 1 380px; max-width: 520px">
+<label for="notes-email" style="position: absolute; width: 1px; height: 1px; overflow: hidden">Email address</label>
+<input id="notes-email" type="email" placeholder="you@email.com" style="flex: 1 1 220px; min-width: 0; font: inherit; font-size: 16px; padding: 15px 18px; border: 2px solid #16161D; border-radius: 12px; background: #FFFFFF">
+<button type="button" style="font: inherit; font-weight: 700; font-size: 16px; background: #16161D; color: #FAF7F0; border: 0; padding: 15px 22px; border-radius: 12px; cursor: pointer">Subscribe</button>
+</form>
+</div>
+</section>
+
+<footer class="bp" style="color: #D6E6FA; padding: 32px">
+<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; font-size: 14px">
+<span>© 2026 Tushar Sahu</span>
+<div style="display: flex; flex-wrap: wrap; gap: 20px"><a href="#" style="color: #C9C6D6">Terms</a><a href="#" style="color: #C9C6D6">Privacy</a><a href="#" style="color: #C9C6D6">Refund Policy</a><a href="#" style="color: #C9C6D6">FAQ</a><a href="index.html" style="color: #C9C6D6">Contact</a></div>
+</div>
+</footer>
+</div>
+</body>
+</html>

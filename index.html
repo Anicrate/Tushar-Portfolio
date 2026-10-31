@@ -1,770 +1,365 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tushar Sahu — Software Developer, NatWest Group</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tushar Sahu — Engineer by degree. Strategist by choice.</title>
+<meta name="description" content="Tushar Sahu — Software Engineer at NatWest Group, NIT Rourkela CSE, CAT 2026 aspirant. Building mascot-led visual CAT notes.">
+<meta name="theme-color" content="#0F3A6B">
+<meta property="og:title" content="Tushar Sahu — Engineer by degree. Strategist by choice.">
+<meta property="og:description" content="Tushar Sahu — Software Engineer at NatWest Group, NIT Rourkela CSE, CAT 2026 aspirant. Building mascot-led visual CAT notes.">
+<meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Kalam:wght@400;700&amp;display=swap">
 <style>
-  :root{
-    --bg:#F6F5F0;
-    --surface:#FFFFFF;
-    --ink:#12141B;
-    --ink-soft:#5B5F6B;
-    --line:#E4E2DA;
-    --accent:#2E5CFF;
-    --accent-ink:#0E1B57;
-    --coral:#FF6B4A;
-    --mint:#17B884;
-    --mint-bg:#E4F7EE;
-    --mint-text:#0E7A55;
-    --code-bg:#12141B;
-    --code-text:#D9DCE6;
-    --contact-bg:#12141B;
-    --grid-line: rgba(18,20,27,0.035);
-    --header-bg: rgba(246,245,240,0.78);
-    --radius:14px;
-    --shadow: 0 1px 2px rgba(18,20,27,0.04), 0 12px 32px -16px rgba(18,20,27,0.16);
-  }
-  html[data-theme="dark"]{
-    --bg:#0E1014;
-    --surface:#181B22;
-    --ink:#F1EFE9;
-    --ink-soft:#9A9EAC;
-    --line:#2B2E38;
-    --accent:#6C8CFF;
-    --accent-ink:#C7D3FF;
-    --coral:#FF8465;
-    --mint:#3FD8A6;
-    --mint-bg:rgba(63,216,166,0.12);
-    --mint-text:#5FE6BB;
-    --code-bg:#0A0B10;
-    --contact-bg:#0A0B10;
-    --grid-line: rgba(255,255,255,0.045);
-    --header-bg: rgba(14,16,20,0.82);
-    --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 16px 36px -16px rgba(0,0,0,0.55);
-  }
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{ margin:0; background:var(--bg); color:var(--ink); font-family:'Inter',sans-serif; -webkit-font-smoothing:antialiased; overflow-x:hidden;
-    transition:background-color .4s ease, color .4s ease; }
-  header, .chip, .lcard, .code-window, .acad-card, .eyebrow, .btn-ghost, .cgpa-badge, .contact-links a{
-    transition:background-color .35s ease, color .35s ease, border-color .35s ease, box-shadow .35s ease;
-  }
-  ::selection{background:var(--accent);color:#fff;}
-  h1,h2,h3{font-family:'Space Grotesk',sans-serif; margin:0; letter-spacing:-0.02em;}
-  a{color:inherit;}
-  .mono{font-family:'JetBrains Mono',monospace;}
-  .wrap{max-width:1120px; margin:0 auto; padding:0 32px;}
-  @media (max-width:640px){ .wrap{padding:0 20px;} }
+body{margin:0;background:#FBF8F1}
+a{color:#1D5BA6}a:hover{color:#0F3A6B}
+.paper{background-color:#FBF8F1;background-image:linear-gradient(90deg,transparent 118px,#F0A8A0 118px,#F0A8A0 120px,transparent 120px),repeating-linear-gradient(#FBF8F1 0,#FBF8F1 35px,#DCE6F2 35px,#DCE6F2 36px)}
+.bp{background-color:#0F3A6B;background-image:linear-gradient(rgba(255,255,255,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.14) 1px,transparent 1px),linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:120px 120px,120px 120px,24px 24px,24px 24px}
+.float{animation:float 4s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.wiggle{animation:wiggle 3s ease-in-out infinite}
+@keyframes wiggle{0%,100%{transform:rotate(-6deg)}50%{transform:rotate(-2deg)}}
+.spin{animation:spin 24s linear infinite;transform-origin:center}
+@keyframes spin{to{transform:rotate(360deg)}}
+.pulse{animation:pulse 2s ease-out infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,194,102,.8)}100%{box-shadow:0 0 0 18px rgba(255,194,102,0)}}
+.draw-once path,.draw-once circle,.draw-once line{stroke-dasharray:700;stroke-dashoffset:700;animation:drawOnce 3.2s ease-out forwards}
+@keyframes drawOnce{to{stroke-dashoffset:0}}
 
-  .bg-grid{
-    position:fixed; inset:0; z-index:0; pointer-events:none;
-    background-image:
-      linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
-      linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
-    background-size:64px 64px;
-    transition:background-image .4s ease;
-    mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 40%, transparent 90%);
-  }
+/* ===== Cinematic scroll-driven motion (Chrome/Edge; static elsewhere) ===== */
+@supports (animation-timeline: view()){
+.progress{transform-origin:left;animation:grow linear both;animation-timeline:scroll(root)}
+@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.cine-exit{animation:camPush linear both;animation-timeline:view();animation-range:exit 0% exit 90%}
+@keyframes camPush{to{transform:scale(1.35);opacity:0;filter:blur(12px)}}
+.parallax{animation:par linear both;animation-timeline:view();animation-range:exit 0% exit 100%}
+@keyframes par{to{transform:translateY(-160px) scale(1.12)}}
 
-  header{ position:sticky; top:0; z-index:50; background:var(--header-bg); backdrop-filter:blur(10px); border-bottom:1px solid var(--line); transition:background-color .4s ease, border-color .4s ease, box-shadow .3s ease, padding .3s ease; }
-  .navbar{ display:flex; align-items:center; justify-content:space-between; padding:16px 32px; max-width:1120px; margin:0 auto;}
-  @media (max-width:640px){ .navbar{ padding:14px 20px; } }
-  .logo{ display:flex; align-items:center; gap:10px; font-family:'Space Grotesk'; font-weight:600; font-size:16px;}
-  .logo .dot{ width:9px; height:9px; border-radius:2px; background:var(--accent); display:inline-block; animation:blink 1.6s steps(2) infinite;}
-  @keyframes blink{ 50%{opacity:0.25;} }
-  nav ul{ list-style:none; display:flex; gap:26px; margin:0; padding:0; font-size:14px; color:var(--ink-soft);}
-  nav a{ text-decoration:none; transition:color .2s ease; position:relative;}
-  nav a:hover{ color:var(--ink); }
-  nav a::after{content:'';position:absolute;left:0;bottom:-4px;width:0;height:1px;background:var(--accent);transition:width .25s ease;}
-  nav a:hover::after{width:100%;}
-  .nav-right{display:flex; align-items:center; gap:14px;}
-  .theme-toggle{
-    display:inline-flex; align-items:center; justify-content:center;
-    width:36px; height:36px; border-radius:9px; border:1px solid var(--line);
-    background:var(--surface); cursor:pointer; padding:0;
-    transition:background-color .3s ease, border-color .3s ease, transform .2s ease;
-  }
-  .theme-toggle:hover{ transform:translateY(-2px); border-color:var(--accent); }
-  .theme-toggle svg{ width:17px; height:17px; stroke:var(--ink); transition:opacity .25s ease, transform .4s ease; }
-  .theme-toggle .icon-sun{ display:none; }
-  html[data-theme="dark"] .theme-toggle .icon-moon{ display:none; }
-  html[data-theme="dark"] .theme-toggle .icon-sun{ display:block; }
-  .btn{ font-family:'JetBrains Mono',monospace; font-size:13px; font-weight:500; background:var(--contact-bg); color:#fff; padding:10px 18px; border-radius:8px; text-decoration:none; display:inline-flex; align-items:center; gap:8px; transition:transform .2s ease, background .2s ease; border:1px solid var(--contact-bg); }
-  .btn:hover{ transform:translateY(-2px); background:var(--accent); border-color:var(--accent); }
-  .navmenu{display:flex;}
-  @media (max-width:900px){ .navmenu{display:none;} }
+.scene{view-timeline-name:--scene}
+.sc-grid{animation:gridZoom linear both;animation-timeline:--scene;animation-range:contain 0% contain 100%}
+@keyframes gridZoom{0%{transform:scale(1.25);opacity:.3;filter:blur(6px)}25%{transform:scale(1);opacity:1;filter:none}100%{transform:scale(1.5);opacity:.7}}
+.sc-title{animation:titleZoom linear both;animation-timeline:--scene;animation-range:contain 0% contain 100%}
+@keyframes titleZoom{0%{transform:scale(.45);opacity:0;letter-spacing:.4em;filter:blur(10px)}24%{transform:scale(1);opacity:1;letter-spacing:-.02em;filter:none}62%{transform:scale(1.7);opacity:1;filter:none}80%{transform:scale(9);opacity:0;filter:blur(6px)}100%{transform:scale(26);opacity:0}}
+.sc-kicker{animation:kicker linear both;animation-timeline:--scene;animation-range:contain 0% contain 55%}
+@keyframes kicker{0%{opacity:0;transform:translateY(40px)}40%,70%{opacity:1;transform:none}100%{opacity:0;transform:translateY(-30px)}}
+.sc-dim line,.sc-dim path,.sc-dim circle{stroke-dasharray:900;animation:dimDraw linear both;animation-timeline:--scene;animation-range:contain 5% contain 45%}
+@keyframes dimDraw{from{stroke-dashoffset:900}to{stroke-dashoffset:0}}
+.sc-mascot{animation:mascotDive linear both;animation-timeline:--scene;animation-range:contain 8% contain 78%}
+@keyframes mascotDive{0%{opacity:0;transform:translateY(140px) scale(.55)}35%{opacity:1;transform:none}100%{opacity:0;transform:translateY(-80px) scale(3.2)}}
+.sc-paper{animation:paperFly linear both;animation-timeline:--scene;animation-range:contain 0% contain 40%}
+@keyframes paperFly{0%{transform:translate(0,0) rotate(0) scale(1);opacity:1}100%{transform:translate(-700px,-500px) rotate(-35deg) scale(.6);opacity:0}}
+.sc-paper2{animation:paperFly2 linear both;animation-timeline:--scene;animation-range:contain 0% contain 40%}
+@keyframes paperFly2{0%{transform:none;opacity:1}100%{transform:translate(700px,-460px) rotate(30deg) scale(.6);opacity:0}}
+.bar-top,.bar-bottom{animation:bars linear both;animation-timeline:--scene;animation-range:contain 0% contain 100%}
+.bar-top{transform-origin:top}.bar-bottom{transform-origin:bottom}
+@keyframes bars{0%{transform:scaleY(0)}16%,84%{transform:scaleY(1)}100%{transform:scaleY(0)}}
 
-  /* mobile menu toggle + dropdown panel */
-  .menu-toggle{
-    display:none; align-items:center; justify-content:center; width:36px; height:36px;
-    border-radius:9px; border:1px solid var(--line); background:var(--surface); cursor:pointer; padding:0;
-    transition:background-color .3s ease, border-color .3s ease;
-  }
-  .menu-toggle span{ position:relative; width:16px; height:2px; background:var(--ink); display:block; transition:transform .25s ease, opacity .25s ease, background-color .3s ease; }
-  .menu-toggle span::before, .menu-toggle span::after{ content:''; position:absolute; left:0; width:16px; height:2px; background:var(--ink); transition:transform .25s ease, top .25s ease; }
-  .menu-toggle span::before{ top:-5px; }
-  .menu-toggle span::after{ top:5px; }
-  .menu-toggle.open span{ background:transparent; }
-  .menu-toggle.open span::before{ top:0; transform:rotate(45deg); }
-  .menu-toggle.open span::after{ top:0; transform:rotate(-45deg); }
-  @media (max-width:900px){ .menu-toggle{ display:inline-flex; } }
-
-  .mobile-panel{
-    max-height:0; overflow:hidden; opacity:0; background:var(--surface); border-bottom:1px solid var(--line);
-    transition:max-height .35s ease, opacity .3s ease, background-color .35s ease, border-color .35s ease;
-  }
-  .mobile-panel.open{ max-height:320px; opacity:1; }
-  .mobile-panel ul{ list-style:none; margin:0; padding:18px 32px 22px; display:flex; flex-direction:column; gap:16px; }
-  .mobile-panel a{ text-decoration:none; color:var(--ink); font-size:15px; font-family:'Space Grotesk'; }
-  @media (max-width:640px){ .mobile-panel ul{ padding:16px 20px 20px; } }
-
-  .hero{ position:relative; z-index:1; padding:96px 0 64px; }
-  @media (max-width:640px){ .hero{ padding:56px 0 44px; } }
-  .eyebrow{ display:inline-flex; align-items:center; gap:8px; font-family:'JetBrains Mono',monospace; font-size:12.5px; color:var(--mint); background:var(--mint-bg); border:1px solid #C7EEDB; padding:6px 12px; border-radius:100px; margin-bottom:28px; }
-  .eyebrow .ping{width:7px;height:7px;border-radius:50%;background:var(--mint); box-shadow:0 0 0 0 rgba(23,184,132,.5); animation:ping 2s infinite;}
-  @keyframes ping{ 0%{box-shadow:0 0 0 0 rgba(23,184,132,.45);} 70%{box-shadow:0 0 0 8px rgba(23,184,132,0);} 100%{box-shadow:0 0 0 0 rgba(23,184,132,0);} }
-
-  .hero-grid{ display:grid; grid-template-columns:1.05fr 0.95fr; gap:56px; align-items:center; }
-  @media (max-width:900px){ .hero-grid{ grid-template-columns:1fr; } }
-
-  .hero h1{ font-size:clamp(38px,5.6vw,62px); line-height:1.04; font-weight:700; }
-  .hero h1 .line2{ color:var(--ink-soft); font-weight:500; }
-  .role-line{ margin-top:18px; font-family:'JetBrains Mono',monospace; font-size:17px; color:var(--accent-ink); min-height:26px; }
-  .role-line::after{ content:''; display:inline-block; width:9px; height:19px; background:var(--accent); margin-left:4px; vertical-align:-4px; animation:caret 1s steps(1) infinite; }
-  @keyframes caret{ 50%{opacity:0;} }
-
-  .hero p.lede{ margin-top:22px; font-size:16.5px; line-height:1.65; color:var(--ink-soft); max-width:48ch; }
-  .hero-cta{ margin-top:34px; display:flex; gap:14px; flex-wrap:wrap; align-items:center; }
-  .btn-ghost{ font-family:'JetBrains Mono',monospace; font-size:13px; font-weight:500; color:var(--ink); padding:10px 18px; border-radius:8px; border:1px solid var(--line); text-decoration:none; transition:border-color .2s ease, background .2s ease; }
-  .btn-ghost:hover{ border-color:var(--ink); background:var(--surface); }
-
-  .stat-row{ display:flex; gap:34px; margin-top:48px; flex-wrap:wrap; }
-  @media (max-width:480px){ .stat-row{ gap:22px; margin-top:36px; } }
-  .stat b{ display:block; font-family:'Space Grotesk'; font-size:24px; }
-  .stat span{ display:block; font-size:12px; color:var(--ink-soft); font-family:'JetBrains Mono',monospace; margin-top:2px;}
-
-  .code-window{ background:var(--code-bg); border-radius:16px; box-shadow:var(--shadow); overflow:hidden; transform:rotate(1deg); transition:transform .4s ease; }
-  .code-window:hover{ transform:rotate(0deg) translateY(-4px); }
-  .code-titlebar{ display:flex; align-items:center; gap:8px; padding:14px 16px; border-bottom:1px solid rgba(255,255,255,0.08); }
-  .code-titlebar span{ width:11px; height:11px; border-radius:50%; display:inline-block; }
-  .dot-r{background:#FF5F57;} .dot-y{background:#FEBC2E;} .dot-g{background:#28C840;}
-  .code-tab{ margin-left:12px; font-family:'JetBrains Mono',monospace; font-size:12px; color:#8B90A0; }
-  .code-body{ padding:24px 22px 28px; font-family:'JetBrains Mono',monospace; font-size:13.2px; line-height:1.85; color:var(--code-text); overflow-x:auto; -webkit-overflow-scrolling:touch; }
-  @media (max-width:480px){ .code-body{ font-size:11.5px; padding:20px 16px 24px; } }
-  .code-body .k{color:#C792EA;} .code-body .s{color:#8FD8A0;} .code-body .c{color:#6E7A94;} .code-body .p{color:#82AAFF;} .code-body .f{color:#FFCB6B;}
-  .typed-cursor{ display:inline-block; width:7px; height:14px; background:#D9DCE6; vertical-align:-2px; animation:caret .9s steps(1) infinite; }
-
-  .reveal{ opacity:0; transform:translateY(28px) scale(.985); transition:opacity .7s cubic-bezier(.2,.8,.2,1), transform .7s cubic-bezier(.2,.8,.2,1); }
-  .reveal.in{ opacity:1; transform:translateY(0) scale(1); }
-  /* staggered children reveal inside grids */
-  .lead-grid .lcard.reveal:nth-child(1){ transition-delay:0s; }
-  .lead-grid .lcard.reveal:nth-child(2){ transition-delay:.08s; }
-  .lead-grid .lcard.reveal:nth-child(3){ transition-delay:.16s; }
-  .lead-grid .lcard.reveal:nth-child(4){ transition-delay:.24s; }
-  .chips .chip{ opacity:0; transform:translateY(10px); transition:opacity .45s cubic-bezier(.2,.8,.2,1), transform .45s cubic-bezier(.2,.8,.2,1); }
-  .reveal.in .chips .chip{ opacity:1; transform:translateY(0); }
-  .reveal.in .chips .chip:nth-child(1){ transition-delay:.05s;}
-  .reveal.in .chips .chip:nth-child(2){ transition-delay:.1s;}
-  .reveal.in .chips .chip:nth-child(3){ transition-delay:.15s;}
-  .reveal.in .chips .chip:nth-child(4){ transition-delay:.2s;}
-  .reveal.in .chips .chip:nth-child(5){ transition-delay:.25s;}
-  .timeline .titem{ opacity:0; transform:translateX(-14px); transition:opacity .6s ease, transform .6s ease; }
-  .timeline.in .titem{ opacity:1; transform:translateX(0); }
-  .timeline.in .titem:nth-child(1){ transition-delay:.05s; }
-  .timeline.in .titem:nth-child(2){ transition-delay:.18s; }
-  .timeline.in .titem:nth-child(3){ transition-delay:.31s; }
-  .timeline.in .titem:nth-child(4){ transition-delay:.44s; }
-
-  /* hand-drawn marker accent — single, deliberate use */
-  .hand{ font-family:'Kalam',cursive; font-weight:700; }
-  .underline-word{ position:relative; display:inline-block; }
-  .underline-word svg{ position:absolute; left:-4%; bottom:-0.22em; width:108%; height:0.42em; overflow:visible; }
-  .underline-word svg path{
-    fill:none; stroke-width:6; stroke-linecap:round; stroke-linejoin:round;
-    vector-effect:non-scaling-stroke;
-    stroke-dasharray:1; stroke-dashoffset:1;
-    transition:stroke-dashoffset 0.85s cubic-bezier(.25,.75,.3,1) .35s;
-  }
-  .underline-word.in svg path{ stroke-dashoffset:0; }
-  .uw-mustard path{ stroke:#E8A23A; }
-  .uw-teal path{ stroke:#178F86; }
-
-  /* ambient doodle accents — minimal, soft */
-  .doodle{ position:absolute; pointer-events:none; opacity:.55; animation:floaty 6s ease-in-out infinite; }
-  .doodle.d2{ animation-delay:-2s; }
-  .doodle.d3{ animation-delay:-4s; }
-  @keyframes floaty{ 0%,100%{ transform:translateY(0);} 50%{ transform:translateY(-6px);} }
-
-  /* scroll progress bar */
-  #scrollbar{ position:fixed; top:0; left:0; height:3px; width:0%; z-index:100;
-    background:linear-gradient(90deg,#2E5CFF,#178F86,#E8A23A); transition:width .1s linear; }
-
-  header{ transition:box-shadow .3s ease, padding .3s ease; }
-  header.scrolled{ box-shadow:0 4px 20px -8px rgba(18,20,27,0.12); }
-  header.scrolled .navbar{ padding-top:11px; padding-bottom:11px; }
-
-  nav a.active{ color:var(--ink); }
-  nav a.active::after{ width:100%; }
-
-  /* tilt-on-hover for interactive cards */
-  .tilt{ will-change:transform; transition:transform .35s cubic-bezier(.2,.8,.2,1); }
-
-  /* hero ambient spotlight + drifting blob */
-  .hero{ overflow:hidden; }
-  .hero-spotlight{
-    position:absolute; width:520px; height:520px; border-radius:50%; pointer-events:none;
-    background:radial-gradient(circle, rgba(46,92,255,0.10), transparent 70%);
-    transform:translate(-50%,-50%); z-index:0; transition:opacity .3s ease; opacity:0;
-  }
-  .hero-blob{
-    position:absolute; top:-120px; right:-140px; width:480px; height:480px; z-index:0; pointer-events:none;
-    background:radial-gradient(circle at 30% 30%, rgba(23,143,134,0.10), transparent 65%),
-               radial-gradient(circle at 70% 70%, rgba(232,162,58,0.10), transparent 65%);
-    filter:blur(10px); animation:blobDrift 14s ease-in-out infinite;
-  }
-  @keyframes blobDrift{ 0%,100%{ transform:translate(0,0) scale(1);} 50%{ transform:translate(-18px,14px) scale(1.05);} }
-
-  @media (prefers-reduced-motion: reduce){
-    .reveal, .chips .chip, .timeline .titem{ transition:none !important; animation:none !important; opacity:1 !important; transform:none !important; }
-    .underline-word svg path{ transition:none !important; stroke-dashoffset:0 !important; }
-    .doodle{ animation:none !important; }
-    .hero-blob{ animation:none !important; }
-    .tilt{ transition:none !important; }
-  }
-
-  section{ position:relative; z-index:1; padding:84px 0; }
-  .section-head{ margin-bottom:44px; max-width:640px; }
-  .section-head .tag{ font-family:'JetBrains Mono',monospace; font-size:12.5px; color:var(--accent); text-transform:uppercase; letter-spacing:.08em; }
-  .section-head h2{ font-size:clamp(27px,3.4vw,36px); margin-top:10px; }
-  .section-head p{ color:var(--ink-soft); margin-top:12px; font-size:15.5px; line-height:1.6; }
-
-  hr.rule{ border:none; border-top:1px solid var(--line); margin:0; }
-
-  .about-grid{ display:grid; grid-template-columns:1.1fr 0.9fr; gap:56px; align-items:start; }
-  @media (max-width:820px){ .about-grid{ grid-template-columns:1fr; } }
-  .about-grid p{ font-size:16.5px; line-height:1.75; color:var(--ink-soft); }
-  .about-grid p strong{ color:var(--ink); font-weight:600; }
-  .skill-cluster{ display:flex; flex-direction:column; gap:22px; }
-  .skill-group .label{ font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--ink-soft); margin-bottom:10px; text-transform:uppercase; letter-spacing:.06em;}
-  .chips{ display:flex; flex-wrap:wrap; gap:8px; }
-  .chip{ font-family:'JetBrains Mono',monospace; font-size:12.5px; padding:7px 12px; border-radius:8px; background:var(--surface); border:1px solid var(--line); transition:border-color .2s, transform .2s; }
-  .chip:hover{ border-color:var(--accent); transform:translateY(-2px); }
-
-  /* timeline used for experience + leadership (real chronology) */
-  .timeline{ border-left:1px solid var(--line); margin-left:6px; }
-  .titem{ position:relative; padding:0 0 40px 32px; }
-  .titem:last-child{ padding-bottom:0; }
-  .titem::before{ content:''; position:absolute; left:-6.5px; top:2px; width:12px; height:12px; border-radius:50%; background:var(--bg); border:2px solid var(--accent); }
-  .titem .tdate{ font-family:'JetBrains Mono',monospace; font-size:11.5px; color:var(--accent); }
-  .titem h3{ font-size:18px; margin-top:8px; }
-  .titem .torg{ font-family:'JetBrains Mono',monospace; font-size:12.5px; color:var(--ink-soft); margin-top:2px; }
-  .titem p{ color:var(--ink-soft); font-size:14.5px; margin-top:10px; line-height:1.6; max-width:58ch;}
-
-  /* leadership cards grid */
-  .lead-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:22px; }
-  @media (max-width:820px){ .lead-grid{ grid-template-columns:1fr; } }
-  .lcard{ background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:26px; box-shadow:var(--shadow); transition:transform .3s ease, box-shadow .3s ease; }
-  .lcard:hover{ transform:translateY(-5px); box-shadow:0 22px 44px -20px rgba(18,20,27,0.2); }
-  .lcard .lrow{ display:flex; justify-content:space-between; align-items:flex-start; gap:12px; margin-bottom:12px; flex-wrap:wrap;}
-  .lcard h3{ font-size:17.5px; }
-  .lcard .ldate{ font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--ink-soft); white-space:nowrap; padding-top:3px;}
-  .lcard .lorg{ font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--accent); margin-bottom:10px; }
-  .lcard p{ color:var(--ink-soft); font-size:14px; line-height:1.62; }
-
-  /* academics */
-  .acad-grid{ display:grid; grid-template-columns:1.3fr 0.7fr; gap:24px; }
-  @media (max-width:820px){ .acad-grid{ grid-template-columns:1fr; } }
-  .acad-card{ background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:28px; box-shadow:var(--shadow); }
-  .acad-card h3{ font-size:19px; }
-  .acad-card .school{ font-family:'JetBrains Mono',monospace; font-size:12.5px; color:var(--ink-soft); margin-top:4px;}
-  .cgpa-badge{ display:inline-flex; align-items:center; gap:8px; margin-top:16px; font-family:'JetBrains Mono',monospace; font-size:13px; background:var(--mint-bg); color:var(--mint-text); padding:8px 14px; border-radius:100px; transition:background-color .35s ease, color .35s ease; }
-  .honors-list{ list-style:none; margin:16px 0 0; padding:0; display:flex; flex-direction:column; gap:12px; }
-  .honors-list li{ font-size:14px; color:var(--ink-soft); display:flex; gap:10px; align-items:flex-start; }
-  .honors-list b{ color:var(--ink); font-weight:600; }
-  .honors-list .ico{ color:var(--accent); flex-shrink:0; margin-top:2px; }
-
-  /* projects */
-  .proj-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
-  @media (max-width:900px){ .proj-grid{ grid-template-columns:1fr 1fr; } }
-  @media (max-width:640px){ .proj-grid{ grid-template-columns:1fr; } }
-  .proj-grid .pub-card{ height:100%; }
-
-  /* publications */
-  .pub-card{ background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:28px; box-shadow:var(--shadow); display:flex; flex-direction:column; gap:14px; transition:transform .3s ease, box-shadow .3s ease; }
-  .pub-card:hover{ transform:translateY(-5px); box-shadow:0 22px 44px -20px rgba(18,20,27,0.2); }
-  .pub-card .prow{ display:flex; justify-content:space-between; align-items:flex-start; gap:14px; flex-wrap:wrap; }
-  .pub-card .ptag{ font-family:'JetBrains Mono',monospace; font-size:11.5px; color:var(--mint); background:var(--mint-bg); padding:5px 11px; border-radius:100px; white-space:nowrap; }
-  .pub-card h3{ font-size:19px; line-height:1.35; }
-  .pub-card .pvenue{ font-family:'JetBrains Mono',monospace; font-size:12.5px; color:var(--ink-soft); }
-  .pub-card .pvenue b{ color:var(--ink); font-weight:600; }
-  .pub-card p{ color:var(--ink-soft); font-size:14.5px; line-height:1.65; max-width:66ch; }
-  .pub-card .plinks{ display:flex; gap:14px; flex-wrap:wrap; margin-top:4px; }
-  .pub-card .plinks a{ font-family:'JetBrains Mono',monospace; font-size:12.5px; color:var(--accent); text-decoration:none; display:inline-flex; align-items:center; gap:6px; }
-  .pub-card .plinks a:hover{ text-decoration:underline; }
-
-  /* next chapter - terminal signature */
-  .term-window{ background:var(--code-bg); border-radius:16px; box-shadow:var(--shadow); overflow:hidden; }
-  .term-body{ padding:30px 28px 34px; font-family:'JetBrains Mono',monospace; font-size:13.6px; line-height:2; color:var(--code-text); }
-  .term-body .prompt{ color:#82AAFF; }
-  .term-body .out{ color:#8FD8A0; }
-  .term-body .branch{ color:#FFCB6B; }
-  .term-body .comment{ color:#6E7A94; }
-  .next-grid{ display:grid; grid-template-columns:0.95fr 1.05fr; gap:48px; align-items:center; }
-  @media (max-width:900px){ .next-grid{ grid-template-columns:1fr; } }
-  .next-copy p{ font-size:16px; line-height:1.7; color:var(--ink-soft); }
-  .next-copy p strong{ color:var(--ink); }
-  .goal-chips{ display:flex; flex-wrap:wrap; gap:8px; margin-top:20px; }
-  .goal-chips .chip{ background:#fff; }
-
-  .contact-box{ background:var(--contact-bg); color:#fff; border-radius:20px; padding:64px 48px; text-align:center; position:relative; overflow:hidden; transition:background-color .35s ease, transform .35s cubic-bezier(.2,.8,.2,1); }
-  @media (max-width:640px){ .contact-box{ padding:44px 24px; border-radius:16px; } }
-  .contact-box::before{ content:''; position:absolute; inset:0; background-image: radial-gradient(circle at 15% 20%, rgba(46,92,255,0.35), transparent 40%), radial-gradient(circle at 85% 80%, rgba(255,107,74,0.25), transparent 40%); }
-  .contact-box *{ position:relative; z-index:1; }
-  .contact-box .tag{ font-family:'JetBrains Mono',monospace; color:#8B90A0; font-size:13px; }
-  .contact-box h2{ font-size:clamp(28px,4.2vw,42px); margin-top:14px; color:#fff; }
-  .contact-box .btn{ margin-top:30px; background:#fff; color:#12141B; border-color:#fff; }
-  .contact-box .btn:hover{ background:var(--accent); color:#fff; border-color:var(--accent); }
-  .contact-links{ margin-top:26px; display:flex; gap:26px; justify-content:center; font-family:'JetBrains Mono',monospace; font-size:13px; color:#B9BCC8; flex-wrap:wrap;}
-  .contact-links a{ text-decoration:none; color:#B9BCC8; transition:color .2s; }
-  .contact-links a:hover{ color:#fff; }
-
-  footer{ padding:32px 0 48px; text-align:center; font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--ink-soft); }
+.line-grow{transform-origin:left;animation:grow linear both;animation-timeline:view();animation-range:entry 30% cover 55%}
+.zoom-in{animation:zoomIn linear both;animation-timeline:view();animation-range:entry 0% cover 35%}
+@keyframes zoomIn{from{opacity:0;transform:scale(.8);filter:blur(10px)}to{opacity:1;transform:none;filter:none}}
+.pin-in{animation:pinIn linear both;animation-timeline:view();animation-range:entry 10% cover 40%}
+@keyframes pinIn{from{opacity:0;transform:translateY(-120px) rotate(-18deg) scale(1.3)}to{opacity:1;transform:rotate(-2deg)}}
+.drop-in{animation:dropIn linear both;animation-timeline:view();animation-range:entry 0% cover 35%}
+@keyframes dropIn{from{opacity:0;transform:translateY(-90px) rotate(-14deg) scale(1.15)}to{opacity:1;transform:rotate(var(--r,0deg))}}
+.tilt-in{animation:tiltIn linear both;animation-timeline:view();animation-range:entry 0% cover 45%}
+@keyframes tiltIn{from{opacity:0;transform:perspective(1200px) rotateX(35deg) scale(.82) translateY(80px)}to{opacity:1;transform:perspective(1200px) rotateX(0) scale(1)}}
+.big-in{animation:bigIn linear both;animation-timeline:view();animation-range:entry 0% cover 50%}
+@keyframes bigIn{from{opacity:0;transform:scale(.6);letter-spacing:.25em}to{opacity:1;transform:none;letter-spacing:-.02em}}
+}
+@media (prefers-reduced-motion: reduce){*{animation:none !important}}
+</style>
+<style>
+html{scroll-behavior:smooth}
+img,svg{max-width:100%}
+body > div{overflow-x:clip}
+@media (max-width: 1100px){
+  [style*="repeat(6, minmax(0, 1fr))"]{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+  [style*="repeat(4, minmax(0, 1fr))"]{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
+@media (max-width: 720px){
+  [style*="grid-template-columns: repeat("]{grid-template-columns:1fr!important}
+  h1{font-size:44px!important}
+  h2{font-size:34px!important}
+  .sc-title{font-size:46px!important;white-space:normal!important}
+  nav{padding-left:20px!important;padding-right:20px!important}
+  nav > div{gap:14px!important;font-size:14px!important}
+  section,footer{padding-left:20px!important;padding-right:20px!important}
+  .paper,.grid-paper{background-image:repeating-linear-gradient(#FBF8F1 0,#FBF8F1 35px,#DCE6F2 35px,#DCE6F2 36px)!important}
+  .parallax > div{zoom:.7}
+  [style*="padding: 56px"]{padding:28px!important}
+  [style*="padding: 40px 40px 40px 150px"]{padding:28px!important}
+  [style*="32px 0 64px"],[style*="0 32px 0 64px"],[style*="32px 96px 64px"],[style*="32px 110px 64px"]{padding-left:0!important;padding-right:0!important}
+  [style*="display: inline-grid"]{display:grid!important;grid-template-columns:repeat(2,auto)!important}
+  [style*="left: 40px; top: 0; bottom: 0"]{display:none!important}
+  [style*="right: 90px; top: 600px"]{display:none!important}
+  .scene{padding-left:0!important;padding-right:0!important;height:1800px!important}
+  .scene > div{height:640px!important}
+  .sc-paper,.sc-paper2,.sc-dim{display:none!important}
+}
 </style>
 </head>
 <body>
+<div class="paper" style="width: 100%; font-family: Inter, system-ui, sans-serif; color: #16161D; box-sizing: border-box">
 
-<div id="scrollbar"></div>
-<div class="bg-grid"></div>
-
-<header>
-  <div class="navbar">
-    <div class="logo"><span class="dot"></span>tushar.dev</div>
-    <nav class="navmenu" id="navmenu">
-      <ul>
-        <li><a href="#about" data-nav="about">About</a></li>
-        <li><a href="#experience" data-nav="experience">Experience</a></li>
-        <li><a href="#projects" data-nav="projects">Projects</a></li>
-        <li><a href="#leadership" data-nav="leadership">Leadership</a></li>
-        <li><a href="#academics" data-nav="academics">Academics</a></li>
-        <li><a href="#publications" data-nav="publications">Publications</a></li>
-      </ul>
-    </nav>
-    <div class="nav-right">
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" type="button">
-        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
-        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
-      </button>
-      <a class="btn navmenu" href="#contact" style="display:inline-flex;">Say hello ↗</a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false" type="button"><span></span></button>
-    </div>
-  </div>
-  <div class="mobile-panel" id="mobilePanel">
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#leadership">Leadership</a></li>
-      <li><a href="#academics">Academics</a></li>
-      <li><a href="#publications">Publications</a></li>
-      <li><a href="#contact">Say hello ↗</a></li>
-    </ul>
-  </div>
+<!-- NAV + scroll progress -->
+<header style="position: sticky; top: 0; z-index: 20; background: rgba(251,248,241,0.94); border-bottom: 1.5px solid #0F3A6B">
+<nav style="max-width: 1200px; margin: 0 auto; padding: 16px 32px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+<a href="index.html" style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 22px; color: #16161D; text-decoration: none">tushar<span style="color: #1D5BA6">.</span>sahu</a>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 28px; font-size: 15px; font-weight: 500">
+<a href="shop.html" style="color: #16161D; text-decoration: none; display: flex; align-items: center; gap: 8px">Shop <span style="background: #E8A33D; color: #16161D; font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 700; padding: 3px 7px; letter-spacing: .04em">SOON</span></a>
+<a href="free.html" style="color: #16161D; text-decoration: none">Free</a>
+<a href="mentorship.html" style="color: #16161D; text-decoration: none">Mentorship</a>
+<a href="notes.html" style="color: #16161D; text-decoration: none">Notes</a>
+<a href="#about" style="color: #16161D; text-decoration: none">About</a>
+<a href="free.html" style="background: #0F3A6B; color: #FFFFFF; text-decoration: none; padding: 12px 18px; border-radius: 4px; font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: .04em; box-shadow: 3px 3px 0 #E8A33D">GET THE FREE PACK</a>
+</div>
+</nav>
+<div aria-hidden="true" class="progress" style="height: 4px; background: #E8A33D; transform: scaleX(.18); transform-origin: left"></div>
 </header>
 
-<section class="hero" id="heroSection">
-  <div class="hero-blob"></div>
-  <div class="hero-spotlight" id="heroSpotlight"></div>
-  <div class="wrap" style="position:relative;">
+<!-- ===== HERO (notebook + blueprint ink) ===== -->
+<section id="top" class="cine-exit" style="position: relative; min-height: 900px">
+<div aria-hidden="true" style="position: absolute; left: 40px; top: 0; bottom: 0; display: flex; flex-direction: column; justify-content: space-around"><span style="width: 22px; height: 22px; border-radius: 99px; background: #E9E2D2; box-shadow: inset 2px 2px 3px rgba(0,0,0,.15)"></span><span style="width: 22px; height: 22px; border-radius: 99px; background: #E9E2D2; box-shadow: inset 2px 2px 3px rgba(0,0,0,.15)"></span><span style="width: 22px; height: 22px; border-radius: 99px; background: #E9E2D2; box-shadow: inset 2px 2px 3px rgba(0,0,0,.15)"></span></div>
+<div aria-hidden="true" style="position: absolute; right: 90px; top: 600px; width: 140px; height: 140px; border-radius: 99px; border: 10px solid rgba(160,110,60,.12)"></div>
 
-    <svg class="doodle d2" style="top:8px; right:4%; width:100px;" viewBox="0 0 140 24" fill="none">
-      <path d="M2 14c22-10 96-10 136 0" stroke="#178F86" stroke-width="3" stroke-linecap="round" pathLength="1"/>
-    </svg>
-    <svg class="doodle d3" style="bottom:2px; left:2%; width:64px;" viewBox="0 0 100 20" fill="none">
-      <path d="M2 11c18-9 62-9 96 0" stroke="#E8A23A" stroke-width="3" stroke-linecap="round" pathLength="1"/>
-    </svg>
+<div style="max-width: 1200px; margin: 0 auto; padding: 80px 32px 0 64px; display: flex; flex-wrap: wrap; gap: 40px; align-items: center; box-sizing: border-box">
+<div style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 22px">
+<div style="display: flex; align-items: center; gap: 14px; flex-wrap: wrap">
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #1D5BA6; border: 1.5px solid #1D5BA6; padding: 4px 10px">FIG. 01</span>
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #1D5BA6">SOFTWARE ENGINEER @ NATWEST · CAT 2026 LOADING…</span>
+</div>
+<h1 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 80px; line-height: 1.02; letter-spacing: -0.03em">Engineer by degree.<br><span style="position: relative; display: inline-block">Strategist<svg aria-hidden="true" width="100%" height="22" viewBox="0 0 300 22" preserveAspectRatio="none" style="position: absolute; left: 0; bottom: -10px"><path d="M4 14 Q80 2 150 12 T296 8" fill="none" stroke="#E8A33D" stroke-width="6" stroke-linecap="round"></path></svg></span> by choice.</h1>
+<div style="display: flex; align-items: center; gap: 10px; color: #1D5BA6; font-family: 'JetBrains Mono', monospace; font-size: 12px; max-width: 600px"><span>|←</span><span style="flex: 1; border-top: 1px solid #1D5BA6"></span><span>5 YEARS OF CODE → 1 PLOT TWIST</span><span style="flex: 1; border-top: 1px solid #1D5BA6"></span><span>→|</span></div>
+<p style="margin: 0; font-size: 20px; line-height: 1.6; color: #4A4A55; max-width: 580px">By day, I build data &amp; cloud systems at NatWest Group. By night, I'm decoding CAT one DILR set at a time — and turning every shortcut into notes you can actually <i>see</i>.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 14px; align-items: center">
+<a href="#journey" style="background: #0F3A6B; color: #FFFFFF; text-decoration: none; font-weight: 600; padding: 16px 24px; border-radius: 4px; box-shadow: 4px 4px 0 #E8A33D">See the plot →</a>
+<a href="#digital" style="border: 2px dashed #1D5BA6; color: #0F3A6B; text-decoration: none; font-weight: 600; padding: 14px 22px; border-radius: 4px; background: rgba(255,255,255,.6)">Visual notes — dropping soon</a>
+<span style="font-family: Kalam, cursive; font-size: 19px; color: #C2410C; transform: rotate(-3deg)">← trust the process</span>
+</div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; max-width: 600px; margin-top: 12px">
+<div style="border-top: 2px solid #0F3A6B; padding-top: 12px"><div style="font-family: 'Space Grotesk', sans-serif; font-size: 32px; font-weight: 700">9.37</div><div style="font-size: 13px; color: #5B5B66">CGPA at NIT Rourkela. The grind was real.</div></div>
+<div style="border-top: 2px solid #0F3A6B; padding-top: 12px"><div style="font-family: 'Space Grotesk', sans-serif; font-size: 32px; font-weight: 700">IEEE</div><div style="font-size: 13px; color: #5B5B66">Peer-reviewed. Game theory × healthcare data.</div></div>
+<div style="border-top: 2px solid #0F3A6B; padding-top: 12px"><div style="font-family: 'Space Grotesk', sans-serif; font-size: 32px; font-weight: 700">3 yrs</div><div style="font-size: 13px; color: #5B5B66">Running stages, events &amp; people.</div></div>
+</div>
+</div>
 
-    <div class="hero-grid">
-      <div class="reveal in">
-        <div class="eyebrow"><span class="ping"></span>currently @ NatWest Group</div>
-        <h1>Tushar Sahu<br><span class="line2">software <span class="underline-word uw-mustard reveal" id="devWord">developer<svg viewBox="0 0 220 20" preserveAspectRatio="none"><path d="M4 15c20-9 60-11 100-9s76 5 112-3" pathLength="1"/></svg></span>.</span></h1>
-        <div class="role-line" id="roleLine"></div>
-        <p class="lede">Software Developer at NatWest Group, building data &amp; cloud systems that support business-critical processes — backed by a background in institute-level leadership and event management.</p>
-        <div class="hero-cta">
-          <a class="btn" href="#experience">View experience ↗</a>
-          <a class="btn-ghost" href="https://www.linkedin.com/in/tusharsahuofficial/" target="_blank" rel="noopener">Connect on LinkedIn</a>
-        </div>
-        <div class="stat-row">
-          <div class="stat"><b class="count-up" data-target="9.37" data-decimals="2">0</b><span>CGPA · NIT Rourkela CSE</span></div>
-          <div class="stat"><b><span class="count-up" data-target="3" data-decimals="0">0</span>+ yrs</b><span>leadership &amp; event ops</span></div>
-          <div class="stat"><b class="count-up" data-target="1" data-decimals="0">0</b><span>NatWest Group, SWE</span></div>
-        </div>
-      </div>
+<div class="parallax" style="flex: 1 1 400px; min-width: 0; display: flex; justify-content: center">
+<div style="width: 440px; height: 470px; position: relative">
+<svg class="spin" aria-hidden="true" width="420" height="420" viewBox="0 0 420 420" style="position: absolute; left: 10px; top: 10px">
+<circle cx="210" cy="210" r="196" fill="none" stroke="#1D5BA6" stroke-width="1" stroke-dasharray="4 8" opacity=".55"></circle>
+<line x1="210" y1="0" x2="210" y2="28" stroke="#1D5BA6" stroke-width="1.5"></line><line x1="210" y1="392" x2="210" y2="420" stroke="#1D5BA6" stroke-width="1.5"></line>
+<line x1="0" y1="210" x2="28" y2="210" stroke="#1D5BA6" stroke-width="1.5"></line><line x1="392" y1="210" x2="420" y2="210" stroke="#1D5BA6" stroke-width="1.5"></line>
+</svg>
+<svg class="draw-once" aria-hidden="true" width="420" height="420" viewBox="0 0 420 420" style="position: absolute; left: 10px; top: 10px">
+<circle cx="210" cy="160" r="96" fill="none" stroke="#1D5BA6" stroke-width="1.2" stroke-dasharray="6 6"></circle>
+<line x1="60" y1="160" x2="360" y2="160" stroke="#1D5BA6" stroke-width="1" stroke-dasharray="3 5"></line>
+<line x1="210" y1="40" x2="210" y2="400" stroke="#1D5BA6" stroke-width="1" stroke-dasharray="3 5"></line>
+<line x1="56" y1="64" x2="56" y2="256" stroke="#1D5BA6" stroke-width="1.2"></line><line x1="48" y1="64" x2="64" y2="64" stroke="#1D5BA6" stroke-width="1.2"></line><line x1="48" y1="256" x2="64" y2="256" stroke="#1D5BA6" stroke-width="1.2"></line>
+</svg>
+<svg class="float" width="300" height="345" viewBox="0 0 200 230" role="img" aria-label="Mascot placeholder: a student with round glasses and a notebook, drawn over blueprint construction lines" style="position: absolute; left: 70px; top: 40px">
+<path d="M45 225 Q45 150 100 148 Q155 150 155 225 Z" fill="#1D5BA6" stroke="#16161D" stroke-width="3"></path>
+<path d="M85 150 L100 172 L115 150" fill="none" stroke="#FBF8F1" stroke-width="3"></path>
+<circle cx="100" cy="92" r="52" fill="#F1CCA6" stroke="#16161D" stroke-width="3"></circle>
+<path d="M50 84 Q52 36 100 38 Q150 36 152 84 Q138 64 120 66 Q126 54 112 50 Q104 66 80 64 Q62 66 50 84 Z" fill="#16161D"></path>
+<circle cx="80" cy="96" r="15" fill="#FFF" stroke="#16161D" stroke-width="3"></circle><circle cx="120" cy="96" r="15" fill="#FFF" stroke="#16161D" stroke-width="3"></circle>
+<line x1="95" y1="96" x2="105" y2="96" stroke="#16161D" stroke-width="3"></line><circle cx="82" cy="98" r="4" fill="#16161D"></circle><circle cx="122" cy="98" r="4" fill="#16161D"></circle>
+<path d="M86 122 Q100 134 114 122" fill="none" stroke="#16161D" stroke-width="3" stroke-linecap="round"></path>
+<g transform="rotate(-10 60 186)"><rect x="36" y="168" width="48" height="38" rx="4" fill="#E8A33D" stroke="#16161D" stroke-width="3"></rect><line x1="44" y1="180" x2="76" y2="180" stroke="#16161D" stroke-width="2"></line><line x1="44" y1="190" x2="70" y2="190" stroke="#16161D" stroke-width="2"></line></g>
+</svg>
+<div style="position: absolute; left: 0; top: 140px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #1D5BA6; transform: rotate(-90deg); transform-origin: left top">HEAD: 80% FORMULAS</div>
+<div style="position: absolute; right: 0; top: 60px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #1D5BA6; text-align: right">LENS:<br>ANALYTICAL ↙</div>
+<div style="position: absolute; left: -20px; top: -10px; background: #FFFFFF; border: 2px solid #16161D; border-radius: 18px 18px 18px 4px; padding: 12px 16px; font-family: Kalam, cursive; font-size: 18px; line-height: 1.3; max-width: 220px; box-shadow: 4px 4px 0 #0F3A6B">Hey, I'm <b>[MASCOT NAME]</b>. Notes are coming alive. Don't blink.</div>
+<div class="wiggle" style="position: absolute; right: -10px; bottom: 10px; background: #FDE68A; padding: 16px 18px; width: 170px; font-family: Kalam, cursive; font-size: 18px; line-height: 1.3; box-shadow: 4px 6px 12px rgba(0,0,0,.12)">CAT in [N] days.<br>No panic. Okay, some panic.</div>
+</div>
+</div>
+</div>
 
-      <div class="code-window reveal in tilt">
-        <div class="code-titlebar">
-          <span class="dot-r"></span><span class="dot-y"></span><span class="dot-g"></span>
-          <span class="code-tab">career.json</span>
-        </div>
-        <div class="code-body">
-<div>{</div>
-<div>&nbsp;&nbsp;<span class="f">"role"</span>: <span class="s">"Software Developer"</span>,</div>
-<div>&nbsp;&nbsp;<span class="f">"company"</span>: <span class="s">"NatWest Group"</span>,</div>
-<div>&nbsp;&nbsp;<span class="f">"stack"</span>: [<span class="s">"Python"</span>, <span class="s">"PostgreSQL"</span>, <span class="s">"AWS"</span>, <span class="s">"Snowflake"</span>],</div>
-<div>&nbsp;&nbsp;<span class="f">"education"</span>: <span class="s">"NIT Rourkela, CSE — 9.37 CGPA"</span>,</div>
-<div>&nbsp;&nbsp;<span class="f">"leadership"</span>: <span class="s">"Prefect, Event Lead, Anchor"</span></div>
-<div>}<span class="typed-cursor"></span></div>
-        </div>
-      </div>
-    </div>
-  </div>
+<div style="max-width: 1200px; margin: 48px auto 0; padding: 0 32px 0 64px; box-sizing: border-box">
+<div style="display: inline-grid; grid-template-columns: repeat(4, auto); border: 1.5px solid #0F3A6B; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #0F3A6B; background: rgba(255,255,255,.75)">
+<div style="padding: 10px 16px; border-right: 1px solid #0F3A6B">PROJECT<br><b style="font-size: 13px">TUSHAR.SAHU</b></div>
+<div style="padding: 10px 16px; border-right: 1px solid #0F3A6B">REV<br><b style="font-size: 13px">v2026.11</b></div>
+<div style="padding: 10px 16px; border-right: 1px solid #0F3A6B">DRAWN BY<br><b style="font-size: 13px">AN ENGINEER</b></div>
+<div style="padding: 10px 16px">STATUS<br><b style="font-size: 13px; color: #C2410C">UPGRADING…</b></div>
+</div>
+</div>
 </section>
 
-<div class="wrap"><hr class="rule"></div>
+<!-- torn edge: paper -> blueprint -->
+<svg aria-hidden="true" width="100%" height="40" viewBox="0 0 1440 40" preserveAspectRatio="none" style="display: block; margin-bottom: -1px">
+<path d="M0 40 L0 18 L40 26 L85 10 L130 24 L170 12 L220 28 L265 8 L310 22 L360 14 L405 30 L450 10 L500 22 L545 6 L590 24 L640 14 L690 28 L735 10 L780 20 L830 6 L875 26 L920 14 L970 28 L1015 8 L1060 22 L1110 12 L1155 30 L1200 10 L1250 24 L1295 8 L1345 22 L1390 12 L1440 24 L1440 40 Z" fill="#0F3A6B"></path>
+</svg>
 
-<section id="about">
-  <div class="wrap">
-    <div class="about-grid">
-      <div class="reveal">
-        <div class="section-head" style="margin-bottom:20px;">
-          <div class="tag">About</div>
-          <h2>Technical depth, business intent.</h2>
-        </div>
-        <p>I'm a <strong>Software Developer at NatWest Group</strong> and a Computer Science graduate from <strong>NIT Rourkela</strong> (CGPA: 9.37). Professionally, I work on data and cloud-based solutions using <strong>Python, PostgreSQL, AWS, and Snowflake</strong> — building reliable, scalable systems that support business-critical processes.</p>
-        <p style="margin-top:16px;">Alongside the technical work, I spent three years in leadership roles at NIT Rourkela — serving as a Prefect at the Institute Counselling Services and leading large-scale institute events end to end, which sharpened my stakeholder management and communication skills.</p>
-      </div>
-      <div class="skill-cluster reveal">
-        <div class="skill-group">
-          <div class="label">Technical</div>
-          <div class="chips">
-            <div class="chip">Python</div><div class="chip">PostgreSQL</div><div class="chip">AWS</div><div class="chip">Snowflake</div><div class="chip">C++</div>
-          </div>
-        </div>
-        <div class="skill-group">
-          <div class="label">Business &amp; Leadership</div>
-          <div class="chips">
-            <div class="chip">Stakeholder Management</div><div class="chip">Event Leadership</div><div class="chip">Team Coordination</div><div class="chip">Cross-functional Collaboration</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<!-- ===== CINEMATIC PINNED SCENE ===== -->
+<section class="scene" aria-label="Sheet two: the build log" style="height: 2400px; background: #0F3A6B; position: relative">
+<div style="position: sticky; top: 72px; height: 820px; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 22px">
+<div class="bp sc-grid" aria-hidden="true" style="position: absolute; inset: -20%"></div>
+<div aria-hidden="true" style="position: absolute; inset: 0; background: radial-gradient(ellipse at center, rgba(15,58,107,0) 30%, rgba(6,24,46,.85) 100%)"></div>
+<div class="sc-paper" aria-hidden="true" style="position: absolute; left: 140px; top: 120px; width: 220px; height: 280px; background: #FBF8F1; transform: rotate(-6deg); box-shadow: 8px 8px 0 rgba(0,0,0,.25); padding: 18px; box-sizing: border-box; font-family: Kalam, cursive; font-size: 20px; color: #16161D">notes p.1<br>— engineer by degree</div>
+<div class="sc-paper2" aria-hidden="true" style="position: absolute; right: 150px; top: 160px; width: 200px; height: 240px; background: #FDE68A; transform: rotate(5deg); box-shadow: 8px 8px 0 rgba(0,0,0,.25); padding: 18px; box-sizing: border-box; font-family: Kalam, cursive; font-size: 20px; color: #16161D">strategist by choice →</div>
+<div class="bar-top" style="position: absolute; top: 0; left: 0; right: 0; height: 90px; background: #06182E"></div>
+<div class="bar-bottom" style="position: absolute; bottom: 0; left: 0; right: 0; height: 90px; background: #06182E"></div>
+<svg class="sc-dim" aria-hidden="true" width="900" height="300" viewBox="0 0 900 300" style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%)">
+<line x1="20" y1="40" x2="880" y2="40" stroke="#FFC266" stroke-width="1.5"></line><line x1="20" y1="30" x2="20" y2="50" stroke="#FFC266" stroke-width="1.5"></line><line x1="880" y1="30" x2="880" y2="50" stroke="#FFC266" stroke-width="1.5"></line>
+<line x1="20" y1="260" x2="880" y2="260" stroke="#FFFFFF" stroke-width="1" stroke-dasharray="4 6"></line>
+<circle cx="450" cy="150" r="140" fill="none" stroke="#FFFFFF" stroke-width="1"></circle>
+</svg>
+<div class="sc-kicker" style="position: relative; font-family: 'JetBrains Mono', monospace; font-size: 15px; letter-spacing: .3em; color: #FFC266">SHEET 02 · SCALE 1:1</div>
+<h2 class="sc-title" style="position: relative; margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 120px; font-weight: 700; line-height: 1; color: #FFFFFF; text-align: center; white-space: nowrap">THE BUILD L<span style="color: #FFC266">O</span>G</h2>
+<div class="sc-kicker" style="position: relative; font-family: Kalam, cursive; font-size: 24px; color: #D6E6FA">from code to case studies (with plot twists)</div>
+<svg class="sc-mascot" aria-hidden="true" width="130" height="150" viewBox="0 0 200 230" style="position: relative; margin-top: 10px">
+<circle cx="100" cy="92" r="52" fill="none" stroke="#FFFFFF" stroke-width="3"></circle>
+<path d="M50 84 Q52 36 100 38 Q150 36 152 84" fill="none" stroke="#FFFFFF" stroke-width="3"></path>
+<circle cx="80" cy="96" r="15" fill="none" stroke="#FFFFFF" stroke-width="3"></circle><circle cx="120" cy="96" r="15" fill="none" stroke="#FFFFFF" stroke-width="3"></circle>
+<line x1="95" y1="96" x2="105" y2="96" stroke="#FFFFFF" stroke-width="3"></line>
+<path d="M86 122 Q100 134 114 122" fill="none" stroke="#FFFFFF" stroke-width="3"></path>
+<path d="M45 225 Q45 150 100 148 Q155 150 155 225" fill="none" stroke="#FFFFFF" stroke-width="3"></path>
+</svg>
+<div style="position: absolute; bottom: 110px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: .2em; color: #9FC3F0">KEEP SCROLLING ↓</div>
+</div>
 </section>
 
-<div class="wrap"><hr class="rule"></div>
-
-<section id="experience">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <div class="tag">Experience</div>
-      <h2>Where I've built.</h2>
-    </div>
-    <div class="timeline reveal">
-      <div class="titem">
-        <div class="tdate">July 2025 — Present</div>
-        <h3>Software Developer</h3>
-        <div class="torg">NatWest Group · India</div>
-        <p>Develop and maintain scalable software and data solutions supporting business-critical processes, using Python, PostgreSQL, AWS services, and Snowflake. Analyze business requirements and translate them into technical solutions that improve operational efficiency and data accessibility, within a collaborative agile environment.</p>
-      </div>
-      <div class="titem">
-        <div class="tdate">May 2024 — July 2024</div>
-        <h3>Software Engineer Intern</h3>
-        <div class="torg">NatWest Group · Gurugram, Haryana</div>
-        <p>Three-month engineering internship that preceded and led directly into the full-time Software Developer offer.</p>
-      </div>
-    </div>
-  </div>
+<!-- ===== JOURNEY (blueprint build log) ===== -->
+<section id="journey" class="bp" style="color: #EAF2FF; padding: 40px 32px 110px">
+<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 44px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 20px">
+<div style="display: flex; flex-direction: column; gap: 12px">
+<div style="font-family: 'JetBrains Mono', monospace; font-size: 14px; color: #FFC266">01 — THE PLOT SO FAR</div>
+<h2 class="big-in" style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 56px; letter-spacing: -0.02em; color: #FFFFFF">Six modules. Zero filler arcs.</h2>
+</div>
+<div style="font-family: Kalam, cursive; font-size: 22px; color: #FFC266; transform: rotate(-3deg)">scroll slowly — the mascot is doing cardio</div>
+</div>
+<div style="position: relative">
+<div aria-hidden="true" style="position: absolute; left: 0; right: 0; top: 18px; border-top: 2px dashed rgba(255,255,255,.25)"></div>
+<div aria-hidden="true" class="line-grow" style="position: absolute; left: 0; right: 0; top: 17px; height: 3px; background: #FFC266"></div>
+<div style="position: relative; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 18px">
+<div class="zoom-in" style="display: flex; flex-direction: column; gap: 14px"><div style="width: 36px; height: 36px; border: 2px solid #FFFFFF; background: #0F3A6B; display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-size: 13px">01</div><div style="border: 1.5px solid rgba(255,255,255,.7); padding: 16px; display: flex; flex-direction: column; gap: 6px; background: rgba(15,58,107,.6)"><div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #9FC3F0">2021</div><div style="font-family: 'Space Grotesk', sans-serif; font-size: 17px; font-weight: 600">NIT Rourkela</div><div style="font-size: 13px; line-height: 1.5; color: #D6E6FA">Signed up for CSE. Walked out with a 9.37 CGPA and a serious chai habit.</div></div></div>
+<div class="zoom-in" style="display: flex; flex-direction: column; gap: 14px; animation-range: entry 10% cover 42%"><div style="width: 36px; height: 36px; border: 2px solid #FFFFFF; background: #0F3A6B; display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-size: 13px">02</div><div style="border: 1.5px solid rgba(255,255,255,.7); padding: 16px; display: flex; flex-direction: column; gap: 6px; background: rgba(15,58,107,.6)"><div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #9FC3F0">2023 – 25</div><div style="font-family: 'Space Grotesk', sans-serif; font-size: 17px; font-weight: 600">Side quest: people</div><div style="font-size: 13px; line-height: 1.5; color: #D6E6FA">Prefect, NITRUTSAV event manager, lead anchor. A live mic is scarier than a merge conflict.</div></div></div>
+<div class="zoom-in" style="display: flex; flex-direction: column; gap: 14px; animation-range: entry 20% cover 48%"><div style="width: 36px; height: 36px; border: 2px solid #FFFFFF; background: #0F3A6B; display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-size: 13px">03</div><div style="border: 1.5px solid rgba(255,255,255,.7); padding: 16px; display: flex; flex-direction: column; gap: 6px; background: rgba(15,58,107,.6)"><div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #9FC3F0">MAY 2024</div><div style="font-family: 'Space Grotesk', sans-serif; font-size: 17px; font-weight: 600">NatWest intern</div><div style="font-size: 13px; line-height: 1.5; color: #D6E6FA">Three months in, walked out with a full-time offer. Efficient.</div></div></div>
+<div class="zoom-in" style="display: flex; flex-direction: column; gap: 14px; animation-range: entry 30% cover 54%"><div style="width: 36px; height: 36px; border: 2px solid #FFFFFF; background: #0F3A6B; display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-size: 13px">04</div><div style="border: 1.5px solid rgba(255,255,255,.7); padding: 16px; display: flex; flex-direction: column; gap: 6px; background: rgba(15,58,107,.6)"><div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #9FC3F0">JUL 2025</div><div style="font-family: 'Space Grotesk', sans-serif; font-size: 17px; font-weight: 600">Software Engineer</div><div style="font-size: 13px; line-height: 1.5; color: #D6E6FA">Shipping data &amp; cloud at NatWest. Also dropped an IEEE paper. Busy summer.</div></div></div>
+<div class="pin-in" style="display: flex; flex-direction: column; gap: 14px"><div class="pulse" style="width: 36px; height: 36px; border: 2px solid #FFC266; background: #FFC266; color: #0F3A6B; display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 700">05</div><div style="background: #FBF8F1; color: #16161D; padding: 16px; display: flex; flex-direction: column; gap: 6px; box-shadow: 6px 6px 0 #FFC266; position: relative"><span aria-hidden="true" style="position: absolute; top: -10px; left: 35%; width: 60px; height: 18px; background: rgba(232,163,61,.7); transform: rotate(-5deg)"></span><div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #C2410C">NOV 2026 · YOU ARE HERE</div><div style="font-family: 'Space Grotesk', sans-serif; font-size: 17px; font-weight: 700">CAT 2026</div><div style="font-family: Kalam, cursive; font-size: 16px; line-height: 1.35">plot twist: tech → management. currently in the arena.</div></div></div>
+<div class="zoom-in" style="display: flex; flex-direction: column; gap: 14px; animation-range: entry 40% cover 62%"><div style="width: 36px; height: 36px; border: 2px dashed rgba(255,255,255,.7); display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-size: 13px">06</div><div style="border: 1.5px dashed rgba(255,255,255,.6); padding: 16px; display: flex; flex-direction: column; gap: 6px"><div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #9FC3F0">2027 →</div><div style="font-family: 'Space Grotesk', sans-serif; font-size: 17px; font-weight: 600">MBA</div><div style="font-size: 13px; line-height: 1.5; color: #D6E6FA">Next chapter loading… please don't refresh.</div></div></div>
+</div>
+</div>
+</div>
 </section>
 
-<div class="wrap"><hr class="rule"></div>
+<!-- torn edge: blueprint -> paper -->
+<svg aria-hidden="true" width="100%" height="40" viewBox="0 0 1440 40" preserveAspectRatio="none" style="display: block; margin-top: -1px">
+<path d="M0 0 L0 22 L45 12 L90 28 L140 10 L185 26 L230 14 L280 30 L325 12 L370 24 L420 8 L465 26 L515 14 L560 30 L605 10 L655 24 L700 12 L750 28 L795 8 L845 22 L890 14 L935 30 L985 10 L1030 26 L1080 12 L1125 24 L1170 8 L1220 28 L1265 14 L1315 26 L1360 10 L1405 22 L1440 14 L1440 0 Z" fill="#0F3A6B"></path>
+</svg>
 
-<section id="projects">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <div class="tag">Projects</div>
-      <h2>Things I've shipped.</h2>
-      <p>Independent builds — front-end heavy, backed by live APIs or a small server, each one designed and coded end to end.</p>
-    </div>
-    <div class="proj-grid">
-      <div class="pub-card reveal tilt">
-        <div class="prow">
-          <h3>CodeQuest</h3>
-          <span class="ptag">Web App</span>
-        </div>
-        <div class="pvenue">Live coding contest tracker</div>
-        <p>Pulls real-time contest schedules straight from the Codeforces, LeetCode and CodeChef APIs — search, platform filters, sorting, and live countdown timers, with a dark/light theme and a fully responsive layout down to small phones.</p>
-        <div class="chips">
-          <div class="chip">HTML</div><div class="chip">CSS</div><div class="chip">JavaScript</div><div class="chip">REST APIs</div>
-        </div>
-        <div class="plinks">
-          <a href="https://anicrate.github.io/Coding-Quest/" target="_blank" rel="noopener">Live demo ↗</a>
-          <a href="https://github.com/Anicrate/Coding-Quest" target="_blank" rel="noopener">View on GitHub ↗</a>
-        </div>
-      </div>
-      <div class="pub-card reveal tilt">
-        <div class="prow">
-          <h3>Resolv</h3>
-          <span class="ptag">Full-Stack</span>
-        </div>
-        <div class="pvenue">Campus complaint portal</div>
-        <p>A redesign of a campus complaint system end to end — complaint filing and tracking, a live community feed, and a Staff Console that gives complaints an actual resolution workflow instead of a placeholder timer.</p>
-        <div class="chips">
-          <div class="chip">HTML</div><div class="chip">CSS</div><div class="chip">JavaScript</div><div class="chip">REST APIs</div>
-        </div>
-        <div class="plinks">
-          <a href="https://anicrate.github.io/Hack-nitr/" target="_blank" rel="noopener">Live demo ↗</a>
-          <a href="https://github.com/Anicrate/Hack-nitr" target="_blank" rel="noopener">View on GitHub ↗</a>
-        </div>
-      </div>
-      <div class="pub-card reveal tilt">
-        <div class="prow">
-          <h3>CropFinder</h3>
-          <span class="ptag">Web App</span>
-        </div>
-        <div class="pvenue">Crop recommendation tool</div>
-        <p>Helps users find suitable crops based on soil and regional inputs — a static front end backed by a lightweight Node/Express server for data lookups.</p>
-        <div class="chips">
-          <div class="chip">Node.js</div><div class="chip">Express</div><div class="chip">JavaScript</div>
-        </div>
-        <div class="plinks">
-          <a href="https://anicrate.github.io/Crop-Finder/" target="_blank" rel="noopener">Live demo ↗</a>
-          <a href="https://github.com/Anicrate/Crop-Finder" target="_blank" rel="noopener">View on GitHub ↗</a>
-        </div>
-      </div>
-    </div>
-  </div>
+<!-- ===== DIGITAL (notebook) ===== -->
+<section id="digital" style="max-width: 1200px; margin: 0 auto; padding: 96px 32px 96px 64px; box-sizing: border-box">
+<div class="tilt-in" style="position: relative; background: #FFFFFF; border: 2px solid #16161D; border-radius: 6px; box-shadow: 10px 10px 0 #0F3A6B; padding: 56px; display: flex; flex-wrap: wrap; gap: 48px; align-items: center">
+<span aria-hidden="true" style="position: absolute; top: -14px; left: 80px; width: 110px; height: 26px; background: rgba(232,163,61,.65); transform: rotate(-4deg)"></span>
+<span aria-hidden="true" style="position: absolute; top: -14px; right: 90px; width: 110px; height: 26px; background: rgba(29,91,166,.35); transform: rotate(3deg)"></span>
+<div style="flex: 999 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
+<div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap"><span style="font-family: 'JetBrains Mono', monospace; font-size: 14px; color: #1D5BA6">02 — DIGITAL</span><span style="background: #E8A33D; font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700; padding: 5px 12px; letter-spacing: .05em">ANNOUNCING SOON</span></div>
+<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 52px; letter-spacing: -0.02em; line-height: 1.05">CAT notes you can <span style="font-family: Kalam, cursive; color: #1D5BA6; font-weight: 700">see.</span></h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.6; color: #4A4A55">Mascot-led PDF notes where every shortcut is a comic strip and every trap gets called out — publicly. Built from my own CAT 2026 prep. Tested on me first.</p>
+<form style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px">
+<label for="notify" style="position: absolute; width: 1px; height: 1px; overflow: hidden">Email address</label>
+<input id="notify" type="email" placeholder="you@email.com" style="flex: 1 1 240px; min-width: 0; font: inherit; font-size: 16px; padding: 15px 18px; border: 1.5px solid #16161D; border-radius: 4px; background: #FBF8F1">
+<button type="button" style="font: inherit; font-weight: 600; font-size: 16px; background: #0F3A6B; color: #FFFFFF; border: 0; padding: 15px 24px; border-radius: 4px; cursor: pointer; box-shadow: 3px 3px 0 #E8A33D">Put me first in line</button>
+</form>
+<div style="font-size: 14px; color: #5B5B66">Everyone on the list gets the free sample. No spam, just drops.</div>
+</div>
+<div style="flex: 1 1 380px; min-width: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px">
+<div style="background: #FBF8F1; border: 1.5px solid #16161D; padding: 20px; display: flex; flex-direction: column; gap: 10px; min-height: 160px; transform: rotate(-2deg)"><div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #5B5B66">PACK 01</div><div style="font-family: 'Space Grotesk', sans-serif; font-size: 19px; font-weight: 600">QA Visual Notes</div><div style="margin-top: auto; font-family: Kalam, cursive; font-size: 16px; color: #C2410C">locked · soon</div></div>
+<div class="bp" style="border: 1.5px solid #16161D; padding: 20px; display: flex; flex-direction: column; gap: 10px; min-height: 160px; color: #FFFFFF; transform: translateY(24px) rotate(1.5deg)"><div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #9FC3F0">PACK 02</div><div style="font-family: 'Space Grotesk', sans-serif; font-size: 19px; font-weight: 600">DILR Set-Type Guide</div><div style="margin-top: auto; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #FFC266">LOCKED · SOON</div></div>
+<div class="bp" style="border: 1.5px solid #16161D; padding: 20px; display: flex; flex-direction: column; gap: 10px; min-height: 160px; color: #FFFFFF; transform: rotate(1deg)"><div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #9FC3F0">PACK 03</div><div style="font-family: 'Space Grotesk', sans-serif; font-size: 19px; font-weight: 600">VARC Strategy Maps</div><div style="margin-top: auto; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #FFC266">LOCKED · SOON</div></div>
+<div style="background: #FDE68A; border: 1.5px solid #16161D; padding: 20px; display: flex; flex-direction: column; gap: 10px; min-height: 160px; transform: translateY(24px) rotate(-1.5deg)"><div style="font-family: 'JetBrains Mono', monospace; font-size: 12px">FREE</div><div style="font-family: 'Space Grotesk', sans-serif; font-size: 19px; font-weight: 600">Sample: Percentages</div><div style="margin-top: auto; font-family: Kalam, cursive; font-size: 16px">drops first!</div></div>
+</div>
+</div>
 </section>
 
-<div class="wrap"><hr class="rule"></div>
+<!-- torn edge: paper -> blueprint -->
+<svg aria-hidden="true" width="100%" height="40" viewBox="0 0 1440 40" preserveAspectRatio="none" style="display: block; margin-bottom: -1px">
+<path d="M0 40 L0 18 L40 26 L85 10 L130 24 L170 12 L220 28 L265 8 L310 22 L360 14 L405 30 L450 10 L500 22 L545 6 L590 24 L640 14 L690 28 L735 10 L780 20 L830 6 L875 26 L920 14 L970 28 L1015 8 L1060 22 L1110 12 L1155 30 L1200 10 L1250 24 L1295 8 L1345 22 L1390 12 L1440 24 L1440 40 Z" fill="#0F3A6B"></path>
+</svg>
 
-<section id="leadership">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <div class="tag">Leadership &amp; Impact</div>
-      <h2>Where I've <span class="underline-word uw-teal reveal">led<svg viewBox="0 0 70 20" preserveAspectRatio="none"><path d="M4 14c10-8 44-9 62-2" pathLength="1"/></svg></span>.</h2>
-      <p>The people-facing side of the résumé — event leadership and stakeholder coordination at institute scale.</p>
-    </div>
-    <div class="lead-grid">
-      <div class="lcard reveal tilt">
-        <div class="lrow"><h3>Prefect</h3><span class="ldate">May 2023 – Apr 2025</span></div>
-        <div class="lorg">Institute Counselling Services, NIT Rourkela</div>
-        <p>Led and coordinated the institute's mentor–mentee support program, facilitating communication between mentors, mentees, and coordinators to keep the system running smoothly.</p>
-      </div>
-      <div class="lcard reveal tilt">
-        <div class="lrow"><h3>Management Team</h3><span class="ldate">Mar 2023 – Apr 2025</span></div>
-        <div class="lorg">Aspirants NITR</div>
-        <p>Managed and coordinated multiple student-focused events end to end — planning, execution, hosting, and stakeholder engagement — working closely with cross-functional teams throughout.</p>
-      </div>
-      <div class="lcard reveal tilt">
-        <div class="lrow"><h3>Event Manager, NITRUTSAV</h3><span class="ldate">Mar 2023</span></div>
-        <div class="lorg">NIT Rourkela</div>
-        <p>Coordinated event logistics and execution for one of the institute's flagship festivals, and served as lead anchor managing audience engagement and stage operations for major events.</p>
-      </div>
-    </div>
-  </div>
+<!-- ===== WORK (blueprint spec sheets) ===== -->
+<section id="work" class="bp" style="color: #EAF2FF; padding: 96px 32px">
+<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; flex-direction: column; gap: 12px">
+<div style="font-family: 'JetBrains Mono', monospace; font-size: 14px; color: #FFC266">03 — SPEC SHEETS</div>
+<h2 class="big-in" style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 52px; letter-spacing: -0.02em; color: #FFFFFF">Stuff I shipped (that actually works).</h2>
+</div>
+<div class="zoom-in" style="border: 1.5px solid rgba(255,255,255,.7); padding: 26px 30px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px; background: rgba(15,58,107,.6)">
+<div style="display: flex; flex-direction: column; gap: 6px"><div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #9FC3F0">CURRENT ROLE · JUL 2025 — PRESENT</div><div style="font-family: 'Space Grotesk', sans-serif; font-size: 24px; font-weight: 600">Software Engineer · NatWest Group</div></div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px; font-family: 'JetBrains Mono', monospace; font-size: 13px"><span style="border: 1px solid #9FC3F0; padding: 6px 12px">Python</span><span style="border: 1px solid #9FC3F0; padding: 6px 12px">PostgreSQL</span><span style="border: 1px solid #9FC3F0; padding: 6px 12px">AWS</span><span style="border: 1px solid #9FC3F0; padding: 6px 12px">Snowflake</span></div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px">
+<article class="zoom-in" style="border: 1.5px solid rgba(255,255,255,.7); display: flex; flex-direction: column; background: rgba(15,58,107,.6)">
+<div style="height: 150px; border-bottom: 1.5px solid rgba(255,255,255,.7); display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #9FC3F0">[CodeQuest screenshot]</div>
+<div style="padding: 22px; display: flex; flex-direction: column; gap: 10px"><div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #FFC266">SPEC 01 · WEB APP</div><div style="font-family: 'Space Grotesk', sans-serif; font-size: 21px; font-weight: 600">CodeQuest</div><div style="font-size: 14px; line-height: 1.55; color: #D6E6FA">Every contest on Codeforces, LeetCode &amp; CodeChef, one live countdown. FOMO, organised.</div><div style="display: flex; gap: 16px; font-size: 14px; font-weight: 600"><a href="https://anicrate.github.io/Coding-Quest/" style="color: #FFC266">Live demo ↗</a><a href="https://github.com/Anicrate/Coding-Quest" style="color: #FFFFFF">GitHub ↗</a></div></div>
+</article>
+<article class="zoom-in" style="border: 1.5px solid rgba(255,255,255,.7); display: flex; flex-direction: column; background: rgba(15,58,107,.6); animation-range: entry 10% cover 42%">
+<div style="height: 150px; border-bottom: 1.5px solid rgba(255,255,255,.7); display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #9FC3F0">[Resolv screenshot]</div>
+<div style="padding: 22px; display: flex; flex-direction: column; gap: 10px"><div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #FFC266">SPEC 02 · FULL-STACK</div><div style="font-family: 'Space Grotesk', sans-serif; font-size: 21px; font-weight: 600">Resolv</div><div style="font-size: 14px; line-height: 1.55; color: #D6E6FA">A campus complaint portal where complaints get resolved, not just "noted".</div><div style="display: flex; gap: 16px; font-size: 14px; font-weight: 600"><a href="https://anicrate.github.io/Hack-nitr/" style="color: #FFC266">Live demo ↗</a><a href="https://github.com/Anicrate/Hack-nitr" style="color: #FFFFFF">GitHub ↗</a></div></div>
+</article>
+<article class="zoom-in" style="border: 1.5px solid rgba(255,255,255,.7); display: flex; flex-direction: column; background: rgba(15,58,107,.6); animation-range: entry 20% cover 50%">
+<div style="height: 150px; border-bottom: 1.5px solid rgba(255,255,255,.7); display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #9FC3F0">[CropFinder screenshot]</div>
+<div style="padding: 22px; display: flex; flex-direction: column; gap: 10px"><div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #FFC266">SPEC 03 · WEB APP</div><div style="font-family: 'Space Grotesk', sans-serif; font-size: 21px; font-weight: 600">CropFinder</div><div style="font-size: 14px; line-height: 1.55; color: #D6E6FA">Tell it your soil and region, it tells you what to grow. Farming, but make it an API.</div><div style="display: flex; gap: 16px; font-size: 14px; font-weight: 600"><a href="https://anicrate.github.io/Crop-Finder/" style="color: #FFC266">Live demo ↗</a><a href="https://github.com/Anicrate/Crop-Finder" style="color: #FFFFFF">GitHub ↗</a></div></div>
+</article>
+</div>
+<div id="research" class="pin-in" style="background: #FBF8F1; color: #16161D; padding: 26px 30px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px; box-shadow: 8px 8px 0 #FFC266; position: relative"><span aria-hidden="true" style="position: absolute; top: -11px; left: 45%; width: 90px; height: 22px; background: rgba(232,163,61,.7); transform: rotate(-3deg)"></span>
+<div style="display: flex; flex-direction: column; gap: 6px; max-width: 760px"><div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #1D5BA6">IEEE INDISCON · 2025 · yes, I've been peer-reviewed</div><div style="font-family: 'Space Grotesk', sans-serif; font-size: 21px; font-weight: 600">Data Imputation Technique in Healthcare using Evolutionary Game Theory</div></div>
+<a href="https://ieeexplore.ieee.org/document/11252386" style="font-weight: 600; font-size: 15px">Read on IEEE Xplore ↗</a>
+</div>
+</div>
 </section>
 
-<div class="wrap"><hr class="rule"></div>
+<!-- torn edge: blueprint -> paper -->
+<svg aria-hidden="true" width="100%" height="40" viewBox="0 0 1440 40" preserveAspectRatio="none" style="display: block; margin-top: -1px">
+<path d="M0 0 L0 22 L45 12 L90 28 L140 10 L185 26 L230 14 L280 30 L325 12 L370 24 L420 8 L465 26 L515 14 L560 30 L605 10 L655 24 L700 12 L750 28 L795 8 L845 22 L890 14 L935 30 L985 10 L1030 26 L1080 12 L1125 24 L1170 8 L1220 28 L1265 14 L1315 26 L1360 10 L1405 22 L1440 14 L1440 0 Z" fill="#0F3A6B"></path>
+</svg>
 
-<section id="academics">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <div class="tag">Academics</div>
-      <h2>The record behind the résumé.</h2>
-    </div>
-    <div class="acad-grid" style="grid-template-columns:1fr; max-width:640px;">
-      <div class="timeline reveal">
-          <div class="titem">
-            <div class="tdate">2021 — 2025</div>
-            <h3>Bachelor of Technology, Computer Science</h3>
-            <div class="torg">National Institute of Technology, Rourkela</div>
-            <div class="cgpa-badge">🎓 CGPA 9.37 / 10</div>
-          </div>
-          <div class="titem">
-            <div class="tdate">2019 — 2021</div>
-            <h3>Senior Secondary, Science</h3>
-            <div class="torg">MBS Public School</div>
-            <div class="cgpa-badge">🎓 94.6%</div>
-          </div>
-          <div class="titem">
-            <div class="tdate">2007 — 2019</div>
-            <h3>Secondary, Science</h3>
-            <div class="torg">Vikash Residential School</div>
-            <div class="cgpa-badge">🎓 97.6%</div>
-          </div>
-      </div>
-    </div>
-  </div>
+<!-- ===== THE LORE (notebook sticky notes) ===== -->
+<section id="about" style="max-width: 1200px; margin: 0 auto; padding: 96px 32px 110px 64px; display: flex; flex-direction: column; gap: 36px; box-sizing: border-box">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 20px">
+<div style="display: flex; flex-direction: column; gap: 12px">
+<div style="font-family: 'JetBrains Mono', monospace; font-size: 14px; color: #1D5BA6">04 — OFF THE CLOCK</div>
+<h2 class="big-in" style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 52px; letter-spacing: -0.02em">The lore.</h2>
+</div>
+<p style="margin: 0; font-family: Kalam, cursive; font-size: 22px; color: #C2410C; transform: rotate(-2deg)">the stuff a résumé is too polite to mention</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 22px">
+<article class="drop-in" style="--r: -2deg; background: #FDE68A; padding: 24px; display: flex; flex-direction: column; gap: 10px; min-height: 240px; box-shadow: 5px 8px 14px rgba(0,0,0,.14); transform: rotate(-2deg)"><div style="font-family: 'JetBrains Mono', monospace; font-size: 12px">STAGE-TESTED</div><div style="font-family: Kalam, cursive; font-size: 26px; font-weight: 700; line-height: 1.15">Hand me a mic and a crowd.</div><div style="font-size: 14px; line-height: 1.55; margin-top: auto">Lead anchor for NIT Rourkela's flagship fest, NITRUTSAV. Stage fright got uninstalled.</div></article>
+<article class="drop-in" style="--r: 1.5deg; background: #FFFFFF; border: 1.5px solid #16161D; padding: 24px; display: flex; flex-direction: column; gap: 10px; min-height: 240px; box-shadow: 5px 8px 14px rgba(0,0,0,.1); transform: rotate(1.5deg); animation-range: entry 8% cover 40%"><div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #1D5BA6">MENTOR ENERGY</div><div style="font-family: Kalam, cursive; font-size: 26px; font-weight: 700; line-height: 1.15">Ran the mentor–mentee system.</div><div style="font-size: 14px; line-height: 1.55; color: #4A4A55; margin-top: auto">Two years as Prefect at the Institute Counselling Services, keeping mentors, mentees and coordinators in sync.</div></article>
+<article class="drop-in bp" style="--r: -1deg; color: #FFFFFF; padding: 24px; display: flex; flex-direction: column; gap: 10px; min-height: 240px; box-shadow: 5px 8px 14px rgba(0,0,0,.18); transform: rotate(-1deg); animation-range: entry 16% cover 46%"><div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #FFC266">CHESS, IN PROGRESS</div><div style="font-family: 'Space Grotesk', sans-serif; font-size: 23px; font-weight: 600; line-height: 1.2">Openings: memorised. Endgames: loading.</div><div style="font-size: 14px; line-height: 1.55; color: #D6E6FA; margin-top: auto">Learning the game — shout-out to the Knights Club at NIT Rourkela. Three moves ahead is great CAT practice.</div></article>
+<article class="drop-in" style="--r: 2deg; background: #DCE6F2; padding: 24px; display: flex; flex-direction: column; gap: 10px; min-height: 240px; box-shadow: 5px 8px 14px rgba(0,0,0,.14); transform: rotate(2deg); animation-range: entry 24% cover 52%"><div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #0F3A6B">TWO-BRAIN MODE</div><div style="font-family: Kalam, cursive; font-size: 26px; font-weight: 700; line-height: 1.15">SQL by day. DILR by night.</div><div style="font-size: 14px; line-height: 1.55; color: #2A3A4E; margin-top: auto">Context switching between Snowflake and set theory is my cardio.</div></article>
+</div>
 </section>
 
-<div class="wrap"><hr class="rule"></div>
+<!-- torn edge: paper -> blueprint -->
+<svg aria-hidden="true" width="100%" height="40" viewBox="0 0 1440 40" preserveAspectRatio="none" style="display: block; margin-bottom: -1px">
+<path d="M0 40 L0 18 L40 26 L85 10 L130 24 L170 12 L220 28 L265 8 L310 22 L360 14 L405 30 L450 10 L500 22 L545 6 L590 24 L640 14 L690 28 L735 10 L780 20 L830 6 L875 26 L920 14 L970 28 L1015 8 L1060 22 L1110 12 L1155 30 L1200 10 L1250 24 L1295 8 L1345 22 L1390 12 L1440 24 L1440 40 Z" fill="#0F3A6B"></path>
+</svg>
 
-<section id="publications">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <div class="tag">Publications</div>
-      <h2>Research, published.</h2>
-    </div>
-    <div class="pub-card reveal tilt">
-      <div class="prow">
-        <h3>Data Imputation Technique in Healthcare using Evolutionary Game Theory</h3>
-        <span class="ptag">IEEE · 2025</span>
-      </div>
-      <div class="pvenue"><b>2025 IEEE 6th India Council International Subsections Conference (INDISCON)</b> · Rourkela, India · 21–23 Aug 2025</div>
-      <p>Proposes an efficient imputation framework for large, mixed-type healthcare datasets, using evolutionary game theory to recover missing values with better accuracy and lower computational overhead than existing methods.</p>
-      <div class="plinks">
-        <a href="https://ieeexplore.ieee.org/document/11252386" target="_blank" rel="noopener">View on IEEE Xplore ↗</a>
-        <a href="https://doi.org/10.1109/INDISCON66021.2025.11252386" target="_blank" rel="noopener">DOI: 10.1109/INDISCON66021.2025.11252386 ↗</a>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- ===== CONTACT (blueprint) ===== -->
+<footer id="contact" class="bp" style="color: #FFFFFF; padding: 96px 32px 48px">
+<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 44px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px">
+<h2 class="big-in" style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 64px; letter-spacing: -0.02em; line-height: 1.02">Slide into my inbox.<br><span style="font-family: Kalam, cursive; color: #FFC266">Professionally.</span></h2>
+<a href="mailto:sahutushar29@gmail.com" style="background: #FBF8F1; color: #0F3A6B; text-decoration: none; font-weight: 700; font-size: 18px; padding: 18px 26px; border-radius: 4px; box-shadow: 5px 5px 0 #FFC266">sahutushar29@gmail.com ↗</a>
+</div>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: stretch; gap: 20px; border-top: 1.5px solid rgba(255,255,255,.5); padding-top: 24px">
+<div style="display: flex; flex-direction: column; gap: 12px; font-size: 15px">
+<div style="display: flex; flex-wrap: wrap; gap: 24px"><a href="https://www.linkedin.com/in/tusharsahuofficial/" style="color: #FFFFFF">LinkedIn</a><a href="https://x.com/sahutushar29" style="color: #FFFFFF">X</a><a href="https://www.instagram.com/tusharsahu3676/" style="color: #FFFFFF">Instagram</a><a href="https://github.com/Anicrate" style="color: #FFFFFF">GitHub</a></div>
+<div style="display: flex; flex-wrap: wrap; gap: 20px; font-size: 14px; color: #D6E6FA"><span>© 2026 Tushar Sahu</span><a href="#" style="color: #D6E6FA">Terms</a><a href="#" style="color: #D6E6FA">Privacy</a><a href="#" style="color: #D6E6FA">Refund Policy</a><a href="#" style="color: #D6E6FA">FAQ</a></div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, auto); border: 1.5px solid rgba(255,255,255,.7); font-family: 'JetBrains Mono', monospace; font-size: 11px">
+<div style="padding: 10px 14px; border-right: 1px solid rgba(255,255,255,.5); border-bottom: 1px solid rgba(255,255,255,.5)">SHEET<br><b style="font-size: 13px">FINAL</b></div>
+<div style="padding: 10px 14px; border-bottom: 1px solid rgba(255,255,255,.5)">APPROVED BY<br><b style="font-size: 13px">YOU, HOPEFULLY</b></div>
+<div style="padding: 10px 14px; border-right: 1px solid rgba(255,255,255,.5)">LOCATION<br><b style="font-size: 13px">INDIA</b></div>
+<div style="padding: 10px 14px">STATUS<br><b style="font-size: 13px; color: #FFC266">OPEN TO TALK</b></div>
+</div>
+</div>
+</div>
+</footer>
 
-<section id="contact">
-  <div class="wrap">
-    <div class="contact-box reveal tilt">
-      <div class="tag">Contact</div>
-      <h2>Let's connect.</h2>
-      <a class="btn" href="mailto:sahutushar29@gmail.com">sahutushar29@gmail.com ↗</a>
-      <div class="contact-links">
-        <a href="https://www.linkedin.com/in/tusharsahuofficial/" target="_blank" rel="noopener">Tushar Sahu | LinkedIn</a>
-        <a href="https://x.com/sahutushar29" target="_blank" rel="noopener">Twitter</a>
-        <a href="https://www.instagram.com/tusharsahu3676/" target="_blank" rel="noopener">Instagram</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<footer>© 2026 Tushar Sahu — Software Developer, NatWest Group. NIT Rourkela.</footer>
-
-<script>
-  const roles = ["Software Developer", "Data & Cloud Engineer", "Problem Solver"];
-  const roleEl = document.getElementById('roleLine');
-  let ri = 0, ci = 0, deleting = false;
-  function tick(){
-    const word = roles[ri];
-    if(!deleting){
-      ci++;
-      roleEl.textContent = word.slice(0, ci);
-      if(ci === word.length){ deleting = true; setTimeout(tick, 1400); return; }
-    } else {
-      ci--;
-      roleEl.textContent = word.slice(0, ci);
-      if(ci === 0){ deleting = false; ri = (ri+1) % roles.length; }
-    }
-    setTimeout(tick, deleting ? 35 : 65);
-  }
-  tick();
-
-  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  const io = new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{
-      if(reduceMotion){ e.target.classList.add('in'); return; }
-      e.target.classList.toggle('in', e.isIntersecting);
-    });
-  }, {threshold:0.15, rootMargin:'0px 0px -8% 0px'});
-  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-
-  if(reduceMotion){
-    document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in'));
-  }
-
-  // count-up stats on load
-  document.querySelectorAll('.count-up').forEach(el=>{
-    const target = parseFloat(el.dataset.target);
-    const decimals = parseInt(el.dataset.decimals || '0', 10);
-    if(reduceMotion){ el.textContent = target.toFixed(decimals); return; }
-    const duration = 1100;
-    const start = performance.now();
-    function step(now){
-      const p = Math.min((now - start) / duration, 1);
-      const eased = 1 - Math.pow(1 - p, 3);
-      el.textContent = (target * eased).toFixed(decimals);
-      if(p < 1) requestAnimationFrame(step);
-    }
-    requestAnimationFrame(step);
-  });
-
-  // scroll progress bar + header shrink-on-scroll
-  const scrollbar = document.getElementById('scrollbar');
-  const header = document.querySelector('header');
-  function onScroll(){
-    const h = document.documentElement;
-    const scrolled = h.scrollTop;
-    const max = h.scrollHeight - h.clientHeight;
-    scrollbar.style.width = (max > 0 ? (scrolled / max) * 100 : 0) + '%';
-    header.classList.toggle('scrolled', scrolled > 8);
-  }
-  window.addEventListener('scroll', onScroll, { passive:true });
-  onScroll();
-
-  // active nav link while scrolling (scroll-spy)
-  const navLinks = document.querySelectorAll('#navmenu a[data-nav]');
-  const spySections = ['about','experience','projects','leadership','academics','publications']
-    .map(id=>document.getElementById(id)).filter(Boolean);
-  const spyObserver = new IntersectionObserver((entries)=>{
-    entries.forEach(entry=>{
-      if(entry.isIntersecting){
-        navLinks.forEach(a=>a.classList.remove('active'));
-        const active = document.querySelector(`#navmenu a[data-nav="${entry.target.id}"]`);
-        if(active) active.classList.add('active');
-      }
-    });
-  }, { rootMargin:'-45% 0px -50% 0px', threshold:0 });
-  spySections.forEach(s=>spyObserver.observe(s));
-
-  // hero spotlight follows cursor
-  if(!reduceMotion){
-    const heroSection = document.getElementById('heroSection');
-    const spotlight = document.getElementById('heroSpotlight');
-    heroSection.addEventListener('mousemove', (e)=>{
-      const rect = heroSection.getBoundingClientRect();
-      spotlight.style.left = (e.clientX - rect.left) + 'px';
-      spotlight.style.top = (e.clientY - rect.top) + 'px';
-      spotlight.style.opacity = '1';
-    });
-    heroSection.addEventListener('mouseleave', ()=>{ spotlight.style.opacity = '0'; });
-
-    // gentle 3D tilt on cards
-    document.querySelectorAll('.tilt').forEach(card=>{
-      card.addEventListener('mousemove', (e)=>{
-        const r = card.getBoundingClientRect();
-        const x = (e.clientX - r.left) / r.width - 0.5;
-        const y = (e.clientY - r.top) / r.height - 0.5;
-        card.style.transform = `perspective(700px) rotateX(${(-y*6).toFixed(2)}deg) rotateY(${(x*8).toFixed(2)}deg) translateY(-4px)`;
-      });
-      card.addEventListener('mouseleave', ()=>{ card.style.transform = ''; });
-    });
-  }
-  // mobile hamburger menu
-  const menuToggle = document.getElementById('menuToggle');
-  const mobilePanel = document.getElementById('mobilePanel');
-  menuToggle.addEventListener('click', ()=>{
-    const isOpen = mobilePanel.classList.toggle('open');
-    menuToggle.classList.toggle('open', isOpen);
-    menuToggle.setAttribute('aria-expanded', String(isOpen));
-  });
-  mobilePanel.querySelectorAll('a').forEach(a=>{
-    a.addEventListener('click', ()=>{
-      mobilePanel.classList.remove('open');
-      menuToggle.classList.remove('open');
-      menuToggle.setAttribute('aria-expanded','false');
-    });
-  });
-
-  // dark mode toggle (session-only — no persistent storage in this environment)
-  const themeToggle = document.getElementById('themeToggle');
-  const rootEl = document.documentElement;
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  if(prefersDark){ rootEl.setAttribute('data-theme','dark'); }
-  themeToggle.addEventListener('click', ()=>{
-    const isDark = rootEl.getAttribute('data-theme') === 'dark';
-    rootEl.setAttribute('data-theme', isDark ? 'light' : 'dark');
-  });
-</script>
-
+</div>
 </body>
 </html>
