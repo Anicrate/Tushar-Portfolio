@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QA Visual Notes (draft) · Tushar Sahu</title>
+<meta name="description" content="Tushar Sahu — Software Engineer at NatWest Group, NIT Rourkela CSE, CAT 2026 aspirant. Building mascot-led visual CAT notes.">
+<meta name="theme-color" content="#0F3A6B">
+<meta property="og:title" content="QA Visual Notes (draft) · Tushar Sahu">
+<meta property="og:description" content="Tushar Sahu — Software Engineer at NatWest Group, NIT Rourkela CSE, CAT 2026 aspirant. Building mascot-led visual CAT notes.">
+<meta property="og:type" content="website">
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;family=Kalam:wght@400;700&amp;display=swap">
+<style>
+body{margin:0;background:#FBF8F1}
+a{color:#1D5BA6}a:hover{color:#0F3A6B}
+.paper{background-color:#FBF8F1;background-image:linear-gradient(90deg,transparent 118px,#F0A8A0 118px,#F0A8A0 120px,transparent 120px),repeating-linear-gradient(#FBF8F1 0,#FBF8F1 35px,#DCE6F2 35px,#DCE6F2 36px)}
+.bp{background-color:#0F3A6B;background-image:linear-gradient(rgba(255,255,255,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.14) 1px,transparent 1px),linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:120px 120px,120px 120px,24px 24px,24px 24px}
+@supports (animation-timeline: view()){.progress{transform-origin:left;animation:grow linear both;animation-timeline:scroll(root)}@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}.tilt-in{animation:tiltIn linear both;animation-timeline:view();animation-range:entry 0% cover 45%}@keyframes tiltIn{from{opacity:0;transform:perspective(1200px) rotateX(35deg) scale(.82) translateY(80px)}to{opacity:1;transform:none}}}
+summary{cursor:pointer}
+@supports (animation-timeline: view()){.zoom-in{animation:zoomIn linear both;animation-timeline:view();animation-range:entry 0% cover 35%}@keyframes zoomIn{from{opacity:0;transform:scale(.85);filter:blur(8px)}to{opacity:1;transform:none;filter:none}}}
+@media (prefers-reduced-motion: reduce){.zoom-in{animation:none !important}}
+</style>
+<style>
+html{scroll-behavior:smooth}
+img,svg{max-width:100%}
+body > div{overflow-x:clip}
+@media (max-width: 1100px){
+  [style*="repeat(6, minmax(0, 1fr))"]{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+  [style*="repeat(4, minmax(0, 1fr))"]{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
+@media (max-width: 720px){
+  [style*="grid-template-columns: repeat("]{grid-template-columns:1fr!important}
+  h1{font-size:44px!important}
+  h2{font-size:34px!important}
+  .sc-title{font-size:46px!important;white-space:normal!important}
+  nav{padding-left:20px!important;padding-right:20px!important}
+  nav > div{gap:14px!important;font-size:14px!important}
+  section,footer{padding-left:20px!important;padding-right:20px!important}
+  .paper,.grid-paper{background-image:repeating-linear-gradient(#FBF8F1 0,#FBF8F1 35px,#DCE6F2 35px,#DCE6F2 36px)!important}
+  .parallax > div{zoom:.7}
+  [style*="padding: 56px"]{padding:28px!important}
+  [style*="padding: 40px 40px 40px 150px"]{padding:28px!important}
+  [style*="32px 0 64px"],[style*="0 32px 0 64px"],[style*="32px 96px 64px"],[style*="32px 110px 64px"]{padding-left:0!important;padding-right:0!important}
+  [style*="display: inline-grid"]{display:grid!important;grid-template-columns:repeat(2,auto)!important}
+  [style*="left: 40px; top: 0; bottom: 0"]{display:none!important}
+  [style*="right: 90px; top: 600px"]{display:none!important}
+  .scene{padding-left:0!important;padding-right:0!important;height:1800px!important}
+  .scene > div{height:640px!important}
+  .sc-paper,.sc-paper2,.sc-dim{display:none!important}
+}
+</style>
+</head>
+<body>
+<div class="paper" style="width: 100%; font-family: Inter, system-ui, sans-serif; color: #16161D">
+
+<header style="position: sticky; top: 0; z-index: 5; background: rgba(250,247,240,0.94); border-bottom: 1.5px solid #0F3A6B">
+<nav style="max-width: 1200px; margin: 0 auto; padding: 18px 32px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+<a href="index.html" style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 22px; color: #16161D; text-decoration: none">tushar<span style="color: #1D5BA6">.</span>sahu</a>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 28px; font-size: 15px; font-weight: 500">
+<a href="shop-launch.html" style="color: #16161D; text-decoration: none; border-bottom: 2px solid #E8A33D; padding-bottom: 4px">Shop</a>
+<a href="free.html" style="color: #16161D; text-decoration: none">Free</a>
+<a href="mentorship.html" style="color: #16161D; text-decoration: none">Mentorship</a>
+<a href="notes.html" style="color: #16161D; text-decoration: none">Notes</a>
+<a href="index.html" style="color: #16161D; text-decoration: none">About</a>
+<a href="free.html" style="background: #0F3A6B; color: #FFFFFF; text-decoration: none; padding: 12px 18px; border-radius: 4px; font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: .04em; box-shadow: 3px 3px 0 #E8A33D">GET THE FREE PACK</a>
+</div>
+</nav>
+<div aria-hidden="true" class="progress" style="height: 4px; background: #E8A33D; transform: scaleX(.18); transform-origin: left"></div>
+</header>
+
+<div style="max-width: 1200px; margin: 0 auto; padding: 24px 32px 0; font-size: 14px; color: #5B5B66"><a href="shop-launch.html">Shop</a> / QA / QA Visual Notes</div>
+
+<!-- Top: preview + buy box -->
+<section style="max-width: 1200px; margin: 0 auto; padding: 28px 32px 64px; display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start">
+
+<div style="flex: 999 1 600px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<!-- Sample page preview: comic frames -->
+<div class="tilt-in" style="background: #FFFFFF; border: 2px solid #16161D; border-radius: 6px; box-shadow: 8px 8px 0 #0F3A6B; padding: 28px; display: flex; flex-direction: column; gap: 18px">
+<div style="display: flex; justify-content: space-between; align-items: center"><span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #5B5B66">SAMPLE PAGE · Successive % change</span><span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #5B5B66">p. 14</span></div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px">
+<div style="border: 2px solid #16161D; border-radius: 14px; padding: 16px; min-height: 130px; display: flex; flex-direction: column; justify-content: space-between; background: #F5EFE1"><div style="font-family: 'JetBrains Mono', monospace; font-size: 11px">1</div><div style="font-family: Kalam, cursive; font-size: 18px">"Up 20%, then down 20%… back to where I started!"</div></div>
+<div style="border: 2px solid #16161D; border-radius: 14px; padding: 16px; min-height: 130px; display: flex; flex-direction: column; justify-content: space-between; background: #E8E6F6"><div style="font-family: 'JetBrains Mono', monospace; font-size: 11px">2</div><div style="font-family: Kalam, cursive; font-size: 18px">*sips chai* "Are you sure about that?"</div></div>
+<div style="border: 2px solid #16161D; border-radius: 14px; padding: 16px; min-height: 130px; display: flex; flex-direction: column; justify-content: space-between"><div style="font-family: 'JetBrains Mono', monospace; font-size: 11px">3</div><div style="display: flex; align-items: center; gap: 10px; font-family: 'Space Grotesk', sans-serif; font-size: 26px; font-weight: 700">100 → 120 → <span style="border: 3px solid #C2410C; border-radius: 99px; padding: 0 8px; color: #C2410C">96</span></div></div>
+<div style="border: 2px solid #16161D; border-radius: 14px; padding: 16px; min-height: 130px; display: flex; flex-direction: column; justify-content: space-between; background: #E8A33D"><div style="font-family: 'JetBrains Mono', monospace; font-size: 11px">SHORTCUT</div><div style="font-family: 'Space Grotesk', sans-serif; font-size: 24px; font-weight: 700">a + b + ab/100</div></div>
+</div>
+<div style="border: 2px solid #C2410C; border-radius: 12px; padding: 12px 16px; font-size: 14px; color: #9A3412; font-weight: 600">TRAP #1 — successive changes multiply, they don't add.</div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px">
+<button type="button" aria-label="Preview page 1" style="height: 84px; border: 2px solid #16161D; border-radius: 10px; background: #F5EFE1; cursor: pointer"></button>
+<button type="button" aria-label="Preview page 2" style="height: 84px; border: 1.5px solid #D6CDB8; border-radius: 10px; background: #E8E6F6; cursor: pointer"></button>
+<button type="button" aria-label="Preview page 3" style="height: 84px; border: 1.5px solid #D6CDB8; border-radius: 10px; background: #E3EFE6; cursor: pointer"></button>
+<button type="button" aria-label="Preview page 4" style="height: 84px; border: 1.5px solid #D6CDB8; border-radius: 10px; background: #FCE9C8; cursor: pointer"></button>
+<button type="button" aria-label="See all preview pages" style="height: 84px; border: 1.5px solid #D6CDB8; border-radius: 10px; background: #FFFFFF; font: inherit; font-size: 13px; font-weight: 600; cursor: pointer">+[N] pages</button>
+</div>
+</div>
+
+<aside class="bp" style="flex: 1 1 380px; min-width: 0; position: sticky; top: 96px; color: #FFFFFF; border: 2px solid #16161D; border-radius: 6px; box-shadow: 8px 8px 0 #E8A33D; padding: 28px; display: flex; flex-direction: column; gap: 16px">
+<span style="align-self: flex-start; background: #FBF8F1; color: #0F3A6B; font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700; padding: 4px 10px">BESTSELLER</span>
+<h1 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 38px; letter-spacing: -0.02em; line-height: 1.05">QA Visual Notes</h1>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #D6E6FA">Arithmetic, algebra and geometry — every shortcut drawn as a comic, every trap circled in red. Quant, minus the trauma.</p>
+<div style="font-family: 'Space Grotesk', sans-serif; font-size: 36px; font-weight: 700">[₹ PRICE]</div>
+<ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; font-size: 15px; line-height: 1.5">
+<li>[PAGES]-page PDF, clickable contents</li>
+<li>Tap-to-reveal solutions</li>
+<li>Instant download + lifetime updates</li>
+</ul>
+<a href="#" style="background: #E8A33D; color: #16161D; text-decoration: none; font-weight: 700; font-size: 17px; text-align: center; padding: 17px; border-radius: 4px; box-shadow: 4px 4px 0 #FBF8F1">Buy now</a>
+<a href="shop-launch.html" style="background: #FCE9C8; color: #16161D; text-decoration: none; font-weight: 600; font-size: 15px; text-align: center; padding: 14px; border-radius: 12px; border: 1.5px dashed #B7791F">Get it in the Complete Kit and save</a>
+<div style="font-size: 13px; color: #9FC3F0; line-height: 1.5">Secure checkout via [Instamojo / Topmate] · UPI, cards, netbanking · [Refund policy]</div>
+</aside>
+</section>
+
+<!-- What's inside -->
+<section style="max-width: 1200px; margin: 0 auto; padding: 0 32px 64px; display: flex; flex-direction: column; gap: 24px">
+<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 40px; letter-spacing: -0.02em">What's inside</h2>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px">
+<div class="zoom-in" style="background: #FFFFFF; border: 1px solid #E4DCC9; border-radius: 18px; padding: 24px; display: flex; flex-direction: column; gap: 8px"><div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #1D5BA6">PART 1</div><div style="font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 600">Arithmetic</div><div style="font-size: 14px; line-height: 1.6; color: #4A4A55">Percentages, profit &amp; loss, ratios, averages, time-speed-distance, time &amp; work.</div></div>
+<div class="zoom-in" style="background: #FFFFFF; border: 1px solid #E4DCC9; border-radius: 18px; padding: 24px; display: flex; flex-direction: column; gap: 8px"><div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #1D5BA6">PART 2</div><div style="font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 600">Algebra</div><div style="font-size: 14px; line-height: 1.6; color: #4A4A55">Equations, inequalities, functions, logs, progressions.</div></div>
+<div class="zoom-in" style="background: #FFFFFF; border: 1px solid #E4DCC9; border-radius: 18px; padding: 24px; display: flex; flex-direction: column; gap: 8px"><div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #1D5BA6">PART 3</div><div style="font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 600">Geometry &amp; Modern Math</div><div style="font-size: 14px; line-height: 1.6; color: #4A4A55">Triangles, circles, mensuration, P&amp;C, probability.</div></div>
+</div>
+</section>
+
+<!-- For / not for -->
+<section style="max-width: 1200px; margin: 0 auto; padding: 0 32px 64px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px">
+<div style="background: #E3EFE6; border-radius: 18px; padding: 28px; display: flex; flex-direction: column; gap: 12px"><h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 22px">Made for you if…</h3><ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; font-size: 15px; line-height: 1.5"><li>you learn faster by seeing than by reading</li><li>you want a 10-minute revision before every mock</li><li>you keep falling for the same trap (we've all been there)</li></ul></div>
+<div style="background: #FCE7E0; border-radius: 18px; padding: 28px; display: flex; flex-direction: column; gap: 12px"><h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 22px">Not for you if…</h3><ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; font-size: 15px; line-height: 1.5"><li>you need a question bank — this is notes, not a practice arena</li><li>you're expecting a percentile without taking mocks (no notes can fix that, sorry)</li></ul></div>
+</section>
+
+<!-- Reviews + FAQ -->
+<section style="max-width: 1200px; margin: 0 auto; padding: 0 32px 80px; display: flex; flex-wrap: wrap; gap: 32px">
+<div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 32px">Reviews</h2>
+<div style="background: #FFFFFF; border: 1.5px dashed #C9BFA8; border-radius: 16px; padding: 24px; font-size: 15px; color: #5B5B66; line-height: 1.6">[Real buyer reviews with name and percentile go here after launch — never placeholder praise.]</div>
+</div>
+<div style="flex: 1 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 12px">
+<h2 style="margin: 0 0 4px; font-family: 'Space Grotesk', sans-serif; font-size: 32px">FAQ</h2>
+<details style="background: #FFFFFF; border: 1px solid #E4DCC9; border-radius: 14px; padding: 18px 20px" open><summary style="font-weight: 600; font-size: 16px">How do I receive it?</summary><p style="margin: 10px 0 0; font-size: 15px; line-height: 1.6; color: #4A4A55">Instantly by email after payment, plus a download link on the confirmation page.</p></details>
+<details style="background: #FFFFFF; border: 1px solid #E4DCC9; border-radius: 14px; padding: 18px 20px"><summary style="font-weight: 600; font-size: 16px">Does it work on my phone?</summary><p style="margin: 10px 0 0; font-size: 15px; line-height: 1.6; color: #4A4A55">Yes — any PDF reader. Clickable links work everywhere.</p></details>
+<details style="background: #FFFFFF; border: 1px solid #E4DCC9; border-radius: 14px; padding: 18px 20px"><summary style="font-weight: 600; font-size: 16px">Can I get a refund?</summary><p style="margin: 10px 0 0; font-size: 15px; line-height: 1.6; color: #4A4A55">[Your refund policy, in one line.]</p></details>
+<details style="background: #FFFFFF; border: 1px solid #E4DCC9; border-radius: 14px; padding: 18px 20px"><summary style="font-weight: 600; font-size: 16px">Will it be updated for CAT 2027?</summary><p style="margin: 10px 0 0; font-size: 15px; line-height: 1.6; color: #4A4A55">Yes, free updates for buyers.</p></details>
+</div>
+</section>
+
+<footer class="bp" style="color: #D6E6FA; padding: 32px">
+<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; font-size: 14px">
+<span>© 2026 Tushar Sahu</span>
+<div style="display: flex; flex-wrap: wrap; gap: 20px"><a href="#" style="color: #C9C6D6">Terms</a><a href="#" style="color: #C9C6D6">Privacy</a><a href="#" style="color: #C9C6D6">Refund Policy</a><a href="#" style="color: #C9C6D6">FAQ</a><a href="index.html" style="color: #C9C6D6">Contact</a></div>
+</div>
+</footer>
+</div>
+</body>
+</html>
